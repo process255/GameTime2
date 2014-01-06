@@ -1,0 +1,10 @@
+platform :ios, '6.0'
+
+pod 'LXReorderableCollectionViewFlowLayout', '~> 0.1.0.beta1'
+
+target :Specs do
+	pod 'Cedar', '~> 0.9.4'
+	pod 'CedarAsync', '~> 0.0.1'
+	# pod 'Expecta', '~> 0.2.3'
+	# pod 'OCMock', '~> 2.2.2'
+end

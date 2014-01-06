@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1480087B18721AAD002A20ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087A18721AAD002A20ED /* Foundation.framework */; };
+		1480087D18721AAD002A20ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087C18721AAD002A20ED /* CoreGraphics.framework */; };
+		1480087F18721AAD002A20ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087E18721AAD002A20ED /* UIKit.framework */; };
+		1480088518721AAD002A20ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1480088318721AAD002A20ED /* InfoPlist.strings */; };
+		1480088718721AAD002A20ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1480088618721AAD002A20ED /* main.m */; };
+		1480088B18721AAD002A20ED /* GTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1480088A18721AAD002A20ED /* GTAppDelegate.m */; };
+		1480088E18721AAD002A20ED /* Timers_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480088C18721AAD002A20ED /* Timers_iPhone.storyboard */; };
+		1480089118721AAD002A20ED /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480088F18721AAD002A20ED /* Main_iPad.storyboard */; };
+		1480089618721AAD002A20ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1480089518721AAD002A20ED /* Images.xcassets */; };
+		1491C4A1187756DB003A762B /* GTTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4A0187756DB003A762B /* GTTimerViewController.m */; };
+		1491C4A71878BCFD003A762B /* GTTimerCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4A61878BCFD003A762B /* GTTimerCollectionDataSource.m */; };
+		1491C4AA1878BD77003A762B /* GTTimerViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4A91878BD77003A762B /* GTTimerViewControllerSpec.mm */; };
+		1491C4AC1878BE0C003A762B /* GTTimerCollectionDataSourceSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4AB1878BE0C003A762B /* GTTimerCollectionDataSourceSpec.mm */; };
+		1491C4B0187A1016003A762B /* GTTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4AF187A1016003A762B /* GTTimer.m */; };
+		1491C4B5187A10BF003A762B /* GTTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4B4187A10BF003A762B /* GTTimerCell.m */; };
+		1491C4B8187A11C8003A762B /* GTTimerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4B7187A11C8003A762B /* GTTimerSpec.mm */; };
+		1491C4BA187A124E003A762B /* GTTimerCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4B9187A124E003A762B /* GTTimerCellSpec.mm */; };
+		14E1BC741874D9E2003B72DA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E1BC731874D9E2003B72DA /* SenTestingKit.framework */; };
+		14E1BC751874D9E2003B72DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087C18721AAD002A20ED /* CoreGraphics.framework */; };
+		14E1BC761874D9E2003B72DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087E18721AAD002A20ED /* UIKit.framework */; };
+		14E1BC771874D9E2003B72DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087A18721AAD002A20ED /* Foundation.framework */; };
+		14E1BC7D1874D9E2003B72DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14E1BC7B1874D9E2003B72DA /* InfoPlist.strings */; };
+		14E1BC821874D9E2003B72DA /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E1BC811874D9E2003B72DA /* Cedar-iOS.framework */; };
+		AD4097F9DED04D8FAFDE9D8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E247E8C1494631ADBFFADD /* libPods.a */; };
+		DFEA8F2A11ED4E78B3E3A25B /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEAA780120143D4B37CD9DF /* libPods-Specs.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05BE619DC91A4D2AAEA05A6E /* Pods-GameTimeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameTimeTests.xcconfig"; path = "Pods/Pods-GameTimeTests.xcconfig"; sourceTree = "<group>"; };
+		1480087718721AAD002A20ED /* GameTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1480087A18721AAD002A20ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1480087C18721AAD002A20ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1480087E18721AAD002A20ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1480088218721AAD002A20ED /* GameTime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameTime-Info.plist"; sourceTree = "<group>"; };
+		1480088418721AAD002A20ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1480088618721AAD002A20ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1480088818721AAD002A20ED /* GameTime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameTime-Prefix.pch"; sourceTree = "<group>"; };
+		1480088918721AAD002A20ED /* GTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTAppDelegate.h; sourceTree = "<group>"; };
+		1480088A18721AAD002A20ED /* GTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAppDelegate.m; sourceTree = "<group>"; };
+		1480088D18721AAD002A20ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timers_iPhone.storyboard; sourceTree = "<group>"; };
+		1480089018721AAD002A20ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		1480089518721AAD002A20ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1480089C18721AAD002A20ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1491C49F187756DB003A762B /* GTTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerViewController.h; sourceTree = "<group>"; };
+		1491C4A0187756DB003A762B /* GTTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerViewController.m; sourceTree = "<group>"; };
+		1491C4A51878BCFD003A762B /* GTTimerCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerCollectionDataSource.h; sourceTree = "<group>"; };
+		1491C4A61878BCFD003A762B /* GTTimerCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerCollectionDataSource.m; sourceTree = "<group>"; };
+		1491C4A91878BD77003A762B /* GTTimerViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GTTimerViewControllerSpec.mm; sourceTree = "<group>"; };
+		1491C4AB1878BE0C003A762B /* GTTimerCollectionDataSourceSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GTTimerCollectionDataSourceSpec.mm; sourceTree = "<group>"; };
+		1491C4AE187A1016003A762B /* GTTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimer.h; sourceTree = "<group>"; };
+		1491C4AF187A1016003A762B /* GTTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimer.m; sourceTree = "<group>"; };
+		1491C4B3187A10BF003A762B /* GTTimerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerCell.h; sourceTree = "<group>"; };
+		1491C4B4187A10BF003A762B /* GTTimerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerCell.m; sourceTree = "<group>"; };
+		1491C4B7187A11C8003A762B /* GTTimerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GTTimerSpec.mm; sourceTree = "<group>"; };
+		1491C4B9187A124E003A762B /* GTTimerCellSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GTTimerCellSpec.mm; sourceTree = "<group>"; };
+		14E1BC721874D9E2003B72DA /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E1BC731874D9E2003B72DA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		14E1BC7A1874D9E2003B72DA /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		14E1BC7C1874D9E2003B72DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14E1BC801874D9E2003B72DA /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		14E1BC811874D9E2003B72DA /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		14E1BC831874D9E2003B72DA /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		18E247E8C1494631ADBFFADD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5AB77079CA4A5AA769D6E2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		3FEAA780120143D4B37CD9DF /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C7B538469BE4FAABB1A3BB0 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
+		D118AD767DAA44778A8E1828 /* libPods-GameTimeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameTimeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1480087418721AAC002A20ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1480087D18721AAD002A20ED /* CoreGraphics.framework in Frameworks */,
+				1480087F18721AAD002A20ED /* UIKit.framework in Frameworks */,
+				1480087B18721AAD002A20ED /* Foundation.framework in Frameworks */,
+				AD4097F9DED04D8FAFDE9D8B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E1BC6E1874D9E2003B72DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E1BC751874D9E2003B72DA /* CoreGraphics.framework in Frameworks */,
+				14E1BC761874D9E2003B72DA /* UIKit.framework in Frameworks */,
+				14E1BC821874D9E2003B72DA /* Cedar-iOS.framework in Frameworks */,
+				14E1BC741874D9E2003B72DA /* SenTestingKit.framework in Frameworks */,
+				14E1BC771874D9E2003B72DA /* Foundation.framework in Frameworks */,
+				DFEA8F2A11ED4E78B3E3A25B /* libPods-Specs.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1480086E18721AAC002A20ED = {
+			isa = PBXGroup;
+			children = (
+				1480088018721AAD002A20ED /* GameTime */,
+				14E1BC781874D9E2003B72DA /* Specs */,
+				1480087918721AAD002A20ED /* Frameworks */,
+				1480087818721AAD002A20ED /* Products */,
+				3B5AB77079CA4A5AA769D6E2 /* Pods.xcconfig */,
+				05BE619DC91A4D2AAEA05A6E /* Pods-GameTimeTests.xcconfig */,
+				9C7B538469BE4FAABB1A3BB0 /* Pods-Specs.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		1480087818721AAD002A20ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1480087718721AAD002A20ED /* GameTime.app */,
+				14E1BC721874D9E2003B72DA /* Specs.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1480087918721AAD002A20ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1480087A18721AAD002A20ED /* Foundation.framework */,
+				1480087C18721AAD002A20ED /* CoreGraphics.framework */,
+				1480087E18721AAD002A20ED /* UIKit.framework */,
+				1480089C18721AAD002A20ED /* XCTest.framework */,
+				18E247E8C1494631ADBFFADD /* libPods.a */,
+				D118AD767DAA44778A8E1828 /* libPods-GameTimeTests.a */,
+				14E1BC731874D9E2003B72DA /* SenTestingKit.framework */,
+				3FEAA780120143D4B37CD9DF /* libPods-Specs.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1480088018721AAD002A20ED /* GameTime */ = {
+			isa = PBXGroup;
+			children = (
+				1491C49C18775654003A762B /* Sources */,
+				1480088918721AAD002A20ED /* GTAppDelegate.h */,
+				1480088A18721AAD002A20ED /* GTAppDelegate.m */,
+				1480088C18721AAD002A20ED /* Timers_iPhone.storyboard */,
+				1480088F18721AAD002A20ED /* Main_iPad.storyboard */,
+				1480089518721AAD002A20ED /* Images.xcassets */,
+				1480088118721AAD002A20ED /* Supporting Files */,
+			);
+			path = GameTime;
+			sourceTree = "<group>";
+		};
+		1480088118721AAD002A20ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1480088218721AAD002A20ED /* GameTime-Info.plist */,
+				1480088318721AAD002A20ED /* InfoPlist.strings */,
+				1480088618721AAD002A20ED /* main.m */,
+				1480088818721AAD002A20ED /* GameTime-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1491C49C18775654003A762B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1491C4AD187A0FE1003A762B /* Model */,
+				1491C49E18775696003A762B /* Timers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1491C49E18775696003A762B /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				1491C49F187756DB003A762B /* GTTimerViewController.h */,
+				1491C4A0187756DB003A762B /* GTTimerViewController.m */,
+				1491C4A51878BCFD003A762B /* GTTimerCollectionDataSource.h */,
+				1491C4A61878BCFD003A762B /* GTTimerCollectionDataSource.m */,
+				1491C4B3187A10BF003A762B /* GTTimerCell.h */,
+				1491C4B4187A10BF003A762B /* GTTimerCell.m */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
+		1491C4A218775737003A762B /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				1491C4B6187A117B003A762B /*  Model */,
+				1491C4A81878BD3D003A762B /* Timers */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		1491C4A81878BD3D003A762B /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				1491C4A91878BD77003A762B /* GTTimerViewControllerSpec.mm */,
+				1491C4AB1878BE0C003A762B /* GTTimerCollectionDataSourceSpec.mm */,
+				1491C4B9187A124E003A762B /* GTTimerCellSpec.mm */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
+		1491C4AD187A0FE1003A762B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1491C4AE187A1016003A762B /* GTTimer.h */,
+				1491C4AF187A1016003A762B /* GTTimer.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1491C4B6187A117B003A762B /*  Model */ = {
+			isa = PBXGroup;
+			children = (
+				1491C4B7187A11C8003A762B /* GTTimerSpec.mm */,
+			);
+			name = " Model";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14E1BC781874D9E2003B72DA /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				1491C4A218775737003A762B /* Unit */,
+				14E1BC801874D9E2003B72DA /* Rakefile */,
+				14E1BC811874D9E2003B72DA /* Cedar-iOS.framework */,
+				14E1BC791874D9E2003B72DA /* Supporting Files */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		14E1BC791874D9E2003B72DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14E1BC7A1874D9E2003B72DA /* Specs-Info.plist */,
+				14E1BC7B1874D9E2003B72DA /* InfoPlist.strings */,
+				14E1BC831874D9E2003B72DA /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1480087618721AAC002A20ED /* GameTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 148008AC18721AAD002A20ED /* Build configuration list for PBXNativeTarget "GameTime" */;
+			buildPhases = (
+				DBD5EA33E17944439A821C91 /* Check Pods Manifest.lock */,
+				1480087318721AAC002A20ED /* Sources */,
+				1480087418721AAC002A20ED /* Frameworks */,
+				1480087518721AAC002A20ED /* Resources */,
+				F1A9FB7A1BBA427EAABEFDC2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameTime;
+			productName = GameTime;
+			productReference = 1480087718721AAD002A20ED /* GameTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14E1BC711874D9E2003B72DA /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E1BC861874D9E2003B72DA /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				E6610C08A36F41DAAD561148 /* Check Pods Manifest.lock */,
+				14E1BC6D1874D9E2003B72DA /* Sources */,
+				14E1BC6E1874D9E2003B72DA /* Frameworks */,
+				14E1BC6F1874D9E2003B72DA /* Resources */,
+				14E1BC701874D9E2003B72DA /* ShellScript */,
+				D9C637C0364A49A0880115D8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 14E1BC721874D9E2003B72DA /* Specs.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1480086F18721AAC002A20ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GT;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Simple Tomato";
+			};
+			buildConfigurationList = 1480087218721AAC002A20ED /* Build configuration list for PBXProject "GameTime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1480086E18721AAC002A20ED;
+			productRefGroup = 1480087818721AAD002A20ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1480087618721AAC002A20ED /* GameTime */,
+				14E1BC711874D9E2003B72DA /* Specs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1480087518721AAC002A20ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1480089118721AAD002A20ED /* Main_iPad.storyboard in Resources */,
+				1480089618721AAD002A20ED /* Images.xcassets in Resources */,
+				1480088E18721AAD002A20ED /* Timers_iPhone.storyboard in Resources */,
+				1480088518721AAD002A20ED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E1BC6F1874D9E2003B72DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E1BC7D1874D9E2003B72DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14E1BC701874D9E2003B72DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		D9C637C0364A49A0880115D8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBD5EA33E17944439A821C91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6610C08A36F41DAAD561148 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1A9FB7A1BBA427EAABEFDC2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1480087318721AAC002A20ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1491C4B0187A1016003A762B /* GTTimer.m in Sources */,
+				1480088718721AAD002A20ED /* main.m in Sources */,
+				1491C4B5187A10BF003A762B /* GTTimerCell.m in Sources */,
+				1480088B18721AAD002A20ED /* GTAppDelegate.m in Sources */,
+				1491C4A1187756DB003A762B /* GTTimerViewController.m in Sources */,
+				1491C4A71878BCFD003A762B /* GTTimerCollectionDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E1BC6D1874D9E2003B72DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1491C4B8187A11C8003A762B /* GTTimerSpec.mm in Sources */,
+				1491C4BA187A124E003A762B /* GTTimerCellSpec.mm in Sources */,
+				1491C4AC1878BE0C003A762B /* GTTimerCollectionDataSourceSpec.mm in Sources */,
+				1491C4AA1878BD77003A762B /* GTTimerViewControllerSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1480088318721AAD002A20ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1480088418721AAD002A20ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1480088C18721AAD002A20ED /* Timers_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1480088D18721AAD002A20ED /* Base */,
+			);
+			name = Timers_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1480088F18721AAD002A20ED /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1480089018721AAD002A20ED /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		14E1BC7B1874D9E2003B72DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14E1BC7C1874D9E2003B72DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		148008AA18721AAD002A20ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		148008AB18721AAD002A20ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		148008AD18721AAD002A20ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B5AB77079CA4A5AA769D6E2 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GameTime/GameTime-Prefix.pch";
+				INFOPLIST_FILE = "GameTime/GameTime-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		148008AE18721AAD002A20ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B5AB77079CA4A5AA769D6E2 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GameTime/GameTime-Prefix.pch";
+				INFOPLIST_FILE = "GameTime/GameTime-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		14E1BC841874D9E2003B72DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7B538469BE4FAABB1A3BB0 /* Pods-Specs.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GameTime.app/GameTime";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/sean/work/SimpleTomato/GameTime/GameTime/Specs/Frameworks,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		14E1BC851874D9E2003B72DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7B538469BE4FAABB1A3BB0 /* Pods-Specs.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GameTime.app/GameTime";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/sean/work/SimpleTomato/GameTime/GameTime/Specs/Frameworks,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1480087218721AAC002A20ED /* Build configuration list for PBXProject "GameTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148008AA18721AAD002A20ED /* Debug */,
+				148008AB18721AAD002A20ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		148008AC18721AAD002A20ED /* Build configuration list for PBXNativeTarget "GameTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148008AD18721AAD002A20ED /* Debug */,
+				148008AE18721AAD002A20ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14E1BC861874D9E2003B72DA /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E1BC841874D9E2003B72DA /* Debug */,
+				14E1BC851874D9E2003B72DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1480086F18721AAC002A20ED /* Project object */;
+}

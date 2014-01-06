@@ -1,0 +1,17 @@
+PODS:
+  - Cedar (0.9.4)
+  - CedarAsync (0.0.1):
+    - Cedar
+  - LXReorderableCollectionViewFlowLayout (0.1.1)
+
+DEPENDENCIES:
+  - Cedar (~> 0.9.4)
+  - CedarAsync (~> 0.0.1)
+  - LXReorderableCollectionViewFlowLayout (~> 0.1.0.beta1)
+
+SPEC CHECKSUMS:
+  Cedar: 56053d07b66394a84a576f6a4fa849ec13b5fc56
+  CedarAsync: 4b0d75fcef33dff6623e025b3726a2b2ef4feb39
+  LXReorderableCollectionViewFlowLayout: 7476503803af6badf13fb6164953880396726cb3
+
+COCOAPODS: 0.28.0
