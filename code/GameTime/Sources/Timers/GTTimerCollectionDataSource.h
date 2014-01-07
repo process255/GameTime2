@@ -14,4 +14,6 @@
 UICollectionViewDelegate,
 LXReorderableCollectionViewDelegateFlowLayout>
 
+@property (nonatomic, strong) UICollectionView *collectionView;
+
 @end

@@ -1,6 +1,7 @@
 platform :ios, '6.0'
 
 pod 'LXReorderableCollectionViewFlowLayout', '~> 0.1.0.beta1'
+pod 'CocoaLumberjack', '~> 1.7.0'
 
 target :Specs do
 	pod 'Cedar', '~> 0.9.4'

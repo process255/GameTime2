@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LXReorderableCollectionViewFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,6 +20,11 @@
 			<false/>
 		</dict>
 		<key>Pods-Specs-CedarAsync.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Specs-CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>51A5F78DF59D4481AB97885A</key>
+		<key>09AD83C7826F499ABAEFA395</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66E000276D544C1BA3DF29B6</key>
+		<key>19384FA2B8654B0182618D63</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B382A7129F345D0B9D7FE2B</key>
+		<key>2C14221463BC44F6BC611C1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7797DD691D514BE79B9C5340</key>
+		<key>568A6BFBEA8449BBB3E28574</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8BD760D0EA9F44A9A3571B13</key>
+		<key>784549EAD8D74AADBB7D831C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CA83A6371DB349948197328D</key>
+		<key>828656C05BCB476C8CFBF6D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B18BD29FB3F44857A9D9B8EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8015FA3544E453C8CFB3666</key>
 		<dict>
 			<key>primary</key>
 			<true/>

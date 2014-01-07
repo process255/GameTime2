@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-nN-oDv">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-nN-oDv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewLayout key="collectionViewLayout" id="OPE-NQ-arr" customClass="LXReorderableCollectionViewFlowLayout"/>
@@ -63,6 +63,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JfL-nN-oDv" firstAttribute="top" secondItem="f6j-ST-olx" secondAttribute="top" id="Udc-g8-dus"/>
+                            <constraint firstItem="JfL-nN-oDv" firstAttribute="leading" secondItem="f6j-ST-olx" secondAttribute="leading" id="ZF0-23-4HU"/>
+                            <constraint firstAttribute="trailing" secondItem="JfL-nN-oDv" secondAttribute="trailing" id="lhP-fn-GjH"/>
+                            <constraint firstAttribute="bottom" secondItem="JfL-nN-oDv" secondAttribute="bottom" id="tm4-4W-bg1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NLG-vO-9hm"/>
                     <connections>

@@ -84,6 +84,11 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
+            key = "XcodeColors"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "CEDAR_SYMBOLICATE_EXCEPTIONS"
             value = ""
             isEnabled = "NO">

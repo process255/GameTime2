@@ -24,7 +24,7 @@
     self.title = NSLocalizedString(@"Timers", nil);
     self.collectionView.dataSource = self.dataSource;
     self.collectionView.delegate = self.dataSource;
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +40,7 @@
     if (_dataSource == nil)
     {
         _dataSource = [[GTTimerCollectionDataSource alloc] init];
+        _dataSource.collectionView = self.collectionView;
     }
     return _dataSource;
 }

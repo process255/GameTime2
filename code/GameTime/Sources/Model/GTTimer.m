@@ -10,5 +10,9 @@
 
 @implementation GTTimer
 
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"position = %lu, name = %@", (unsigned long)self.position, self.name];
+}
 
 @end

@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class GTPlayerColor;
+
+
 @interface GTTimer : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) NSUInteger position;
+@property (nonatomic, strong) GTPlayerColor *playerColor;
 
 @end
