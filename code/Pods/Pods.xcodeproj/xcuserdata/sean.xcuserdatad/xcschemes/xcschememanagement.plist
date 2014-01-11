@@ -19,17 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Specs-CedarAsync.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Specs-CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Specs-Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Specs-LXReorderableCollectionViewFlowLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Specs-OCMock.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09AD83C7826F499ABAEFA395</key>
+		<key>09EF9CE0B1C54753B326A171</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>19384FA2B8654B0182618D63</key>
+		<key>5488ADF4F2584DA2B5463B79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C14221463BC44F6BC611C1E</key>
+		<key>91460C8B5D224280BF911EFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>568A6BFBEA8449BBB3E28574</key>
+		<key>BF8C7994A0A9415BBE39472D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>784549EAD8D74AADBB7D831C</key>
+		<key>C33A7374E3FA4D85B70E626A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>828656C05BCB476C8CFBF6D9</key>
+		<key>D323F045A2A242E4B6420ED3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B18BD29FB3F44857A9D9B8EA</key>
+		<key>DD1D1CD11BEE4567A07C29AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8015FA3544E453C8CFB3666</key>
+		<key>E1CBEFCDF76C42F48D589182</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2D822C409FA438BAC928446</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,6 +8,8 @@
 
 #import "GTTimerViewController.h"
 #import "GTTimerCollectionDataSource.h"
+#import "GTSettingsViewController.h"
+
 
 @interface GTTimerViewController ()
 
@@ -31,6 +33,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBActions
+- (IBAction)settingsTapped:(id)sender
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Timers_iPhone" bundle:nil];
+    GTSettingsViewController *settingsVC = [sb instantiateViewControllerWithIdentifier:NSStringFromClass([GTSettingsViewController class])];
+    
+    [self.navigationController pushViewController:settingsVC animated:YES];    
 }
 
 #pragma mark - Getters/Setters

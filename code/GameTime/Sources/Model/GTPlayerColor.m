@@ -10,6 +10,25 @@
 
 @implementation GTPlayerColor
 
++ (GTPlayerColor*)bgColor:(UIColor*)bgColor
+        inactiveNameColor:(UIColor*)inactiveNameColor
+          activeNameColor:(UIColor*)activeNameColor
+         activeTimerColor:(UIColor*)activeTimerColor
+       inactiveTimerColor:(UIColor*)inactiveTimerColor
+            progressColor:(UIColor*)progressColor
+         textFieldBgColor:(UIColor*)textFieldBgColor {
+    
+    GTPlayerColor* playerColor = [[GTPlayerColor alloc] init];
+    playerColor.rowBackgroundColor = bgColor;
+    playerColor.inactiveNameColor = inactiveNameColor;
+    playerColor.activeNameColor = activeNameColor;
+    playerColor.activeTimerColor = activeTimerColor;
+    playerColor.inactiveTimerColor = inactiveTimerColor;
+    playerColor.progressColor = progressColor;
+    playerColor.textFieldBgColor = textFieldBgColor;
+    return playerColor;
+}
+
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
     //Encode properties, other class variables, etc
@@ -18,7 +37,7 @@
     [encoder encodeObject:self.activeNameColor forKey:@"activeNameColor"];
     [encoder encodeObject:self.activeTimerColor forKey:@"activeTimerColor"];
     [encoder encodeObject:self.inactiveTimerColor forKey:@"inactiveTimerColor"];
-    [encoder encodeObject:self.disclosureColor forKey:@"disclosureColor"];
+    [encoder encodeObject:self.progressColor forKey:@"progressColor"];
     [encoder encodeObject:self.textFieldBgColor forKey:@"textFieldBgColor"];
     
     
@@ -34,7 +53,7 @@
         self.activeNameColor = [decoder decodeObjectForKey:@"activeNameColor"];
         self.activeTimerColor = [decoder decodeObjectForKey:@"activeTimerColor"];
         self.inactiveTimerColor = [decoder decodeObjectForKey:@"inactiveTimerColor"];
-        self.disclosureColor = [decoder decodeObjectForKey:@"disclosureColor"];
+        self.progressColor = [decoder decodeObjectForKey:@"progressColor"];
         self.textFieldBgColor = [decoder decodeObjectForKey:@"textFieldBgColor"];        
     }
     return self;

@@ -1,11 +1,12 @@
 platform :ios, '6.0'
 
+link_with ['GameTime']
+
 pod 'LXReorderableCollectionViewFlowLayout', '~> 0.1.0.beta1'
 pod 'CocoaLumberjack', '~> 1.7.0'
 
 target :Specs do
-	pod 'Cedar', '~> 0.9.4'
-	pod 'CedarAsync', '~> 0.0.1'
-	# pod 'Expecta', '~> 0.2.3'
-	# pod 'OCMock', '~> 2.2.2'
+    pod 'Cedar', '~> 0.9.4'
+	pod 'Expecta', '~> 0.2.3'
+	pod 'OCMock', '~> 2.2.2'
 end

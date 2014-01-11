@@ -7,13 +7,37 @@
 //
 
 #import "GTAppDelegate.h"
+#import "GTPreferences.h"
+#import "GTTimeController.h"
+
+// private properties
+@interface GTAppDelegate ()
+
+@property (nonatomic, retain) GTTimeController* timeController;
+
+@end
+
 
 @implementation GTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    
+    [self setupLogger];
+ 
+    [GTPreferences sharedInstance].numberOfPlayers = [GTPreferences sharedInstance].numberOfPlayers;
+    
+    self.timeController = [[GTTimeController alloc] init];
+    
+    return YES;
+}
 
+
+- (void)setupLogger
+{
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
     // And we also enable colors
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
     
@@ -29,10 +53,8 @@
     
     // verbose test
     DDLogVerbose(@"Sample Verbose");
-    
-    return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

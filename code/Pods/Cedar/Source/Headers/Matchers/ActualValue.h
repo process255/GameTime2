@@ -111,7 +111,7 @@ namespace Cedar { namespace Matchers {
 
 }}
 
-//#ifndef CEDAR_MATCHERS_COMPATIBILITY_MODE
-//    #define expect(x) CDR_expect(__FILE__, __LINE__, (x))
-//    #define fail(x) CDR_fail(__FILE__, __LINE__, (x))
-//#endif
+#ifndef CEDAR_MATCHERS_COMPATIBILITY_MODE
+    #define expect(x) CDR_expect(__FILE__, __LINE__, (x))
+    #define fail(x) CDR_fail(__FILE__, __LINE__, (x))
+#endif

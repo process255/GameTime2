@@ -10,6 +10,8 @@
 #import "GTTimer.h"
 #import "GTTimerCell.h"
 #import "GTPlayerColor.h"
+#import "GTTimeHelper.h"
+#import "GTPreferences.h"
 
 @interface GTTimerCollectionDataSource ()
 
@@ -25,7 +27,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    return self.timers.count;
+    return [GTPreferences sharedInstance].numberOfPlayers;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView
@@ -39,7 +41,7 @@
        itemAtIndexPath:(NSIndexPath *)fromIndexPath
     didMoveToIndexPath:(NSIndexPath *)toIndexPath
 {
-    GTTimer *timerToMove = [self.timers objectAtIndex:fromIndexPath.item];
+    GTTimer* timerToMove = [self.timers objectAtIndex:fromIndexPath.item];
     [self.timers removeObject:timerToMove];
     [self.timers insertObject:timerToMove
                       atIndex:toIndexPath.item];
@@ -47,6 +49,7 @@
     for (GTTimer *timer in self.timers)
     {
         timer.position = [self.timers indexOfObject:timer];
+        [[GTPreferences sharedInstance] saveTimer:timer];
     }
 }
 
@@ -63,15 +66,16 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath
     return YES;
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     GTTimer *timer = [self.timers objectAtIndex:indexPath.item];
+    
     GTTimerCell *timerCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TimerCell"
                                                                        forIndexPath:indexPath];
-    timerCell.nameLabel.text = timer.name;
-    timerCell.backgroundColor = timer.playerColor.rowBackgroundColor;
+
+    timerCell.timer = timer;
+    [timerCell start];
     return timerCell;
 }
 
@@ -79,7 +83,7 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake([UIScreen screenWidth], self.collectionView.frame.size.height / self.timers.count);
+    return CGSizeMake([UIScreen screenWidth], self.collectionView.frame.size.height / [GTPreferences sharedInstance].numberOfPlayers);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView
@@ -89,37 +93,47 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
     return 0;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    GTTimer *timer = [self.timers objectAtIndex:indexPath.item];
+    GTTimerCell *timerCell = (GTTimerCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    switch (timer.state)
+    {
+        case GTTimerStatePaused:
+        case GTTimerStateStopped:
+            [timerCell setActive];
+            break;
+        case GTTimerStateStarted:
+            [timerCell setInactive];
+            break;
+            
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+  didEndDisplayingCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    GTTimerCell *timerCell = (GTTimerCell *)cell;
+    [timerCell stop];
+}
+
 #pragma mark - Getters/Setters
 
 - (NSMutableArray*)timers
 {
     if (_timers == nil)
     {
-        GTTimer *timer1 = [[GTTimer alloc] init];
-        timer1.name = @"test1";
-        timer1.position = 0;
-        
-        GTPlayerColor *playerColor1 = [[GTPlayerColor alloc] init];
-        playerColor1.rowBackgroundColor = [UIColor redColor];
-        timer1.playerColor = playerColor1;
-        
-        GTTimer *timer2 = [[GTTimer alloc] init];
-        timer2.name = @"test2";
-        timer2.position = 1;
-        
-        GTPlayerColor *playerColor2 = [[GTPlayerColor alloc] init];
-        playerColor2.rowBackgroundColor = [UIColor purpleColor];
-        timer2.playerColor = playerColor2;
-        
-        GTTimer *timer3 = [[GTTimer alloc] init];
-        timer3.name = @"test3";
-        timer3.position = 2;
-        
-        GTPlayerColor *playerColor3 = [[GTPlayerColor alloc] init];
-        playerColor3.rowBackgroundColor = [UIColor greenColor];
-        timer3.playerColor = playerColor3;
-        
-        _timers = [NSMutableArray arrayWithArray:@[timer1, timer2, timer3]];
+        _timers = [NSMutableArray arrayWithCapacity:[GTPreferences sharedInstance].numberOfPlayers];
+        for ( NSUInteger i = 0 ; i < [GTPreferences sharedInstance].numberOfPlayers ; i++)
+        {
+            GTTimer* timer = [GTTimer timerWith:i];
+            timer.type = GTTimerTypeCountDown;
+            timer.state = GTTimerStatePaused;
+            [[GTPreferences sharedInstance] saveTimer:timer];
+            [_timers addObject:timer];
+        }
     }
     return _timers;
 }

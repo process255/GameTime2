@@ -1,25 +1,27 @@
 PODS:
   - Cedar (0.9.4)
-  - CedarAsync (0.0.1):
-    - Cedar
   - CocoaLumberjack (1.7.0):
     - CocoaLumberjack/Core
     - CocoaLumberjack/Extensions
   - CocoaLumberjack/Core (1.7.0)
   - CocoaLumberjack/Extensions (1.7.0):
     - CocoaLumberjack/Core
+  - Expecta (0.2.3)
   - LXReorderableCollectionViewFlowLayout (0.1.1)
+  - OCMock (2.2.2)
 
 DEPENDENCIES:
   - Cedar (~> 0.9.4)
-  - CedarAsync (~> 0.0.1)
   - CocoaLumberjack (~> 1.7.0)
+  - Expecta (~> 0.2.3)
   - LXReorderableCollectionViewFlowLayout (~> 0.1.0.beta1)
+  - OCMock (~> 2.2.2)
 
 SPEC CHECKSUMS:
   Cedar: 56053d07b66394a84a576f6a4fa849ec13b5fc56
-  CedarAsync: 4b0d75fcef33dff6623e025b3726a2b2ef4feb39
   CocoaLumberjack: be87113f649942f020a37c061c58009b6ee5ff68
+  Expecta: dbc4a27fabb853bdd2e907e33f11ee43a9a47d0c
   LXReorderableCollectionViewFlowLayout: 7476503803af6badf13fb6164953880396726cb3
+  OCMock: ffba68873fd32cfd35d885bddad23bfa816da4a3
 
 COCOAPODS: 0.28.0

@@ -12,12 +12,6 @@
 #define COCOAPODS_VERSION_MINOR_Cedar 9
 #define COCOAPODS_VERSION_PATCH_Cedar 4
 
-// CedarAsync
-#define COCOAPODS_POD_AVAILABLE_CedarAsync
-#define COCOAPODS_VERSION_MAJOR_CedarAsync 0
-#define COCOAPODS_VERSION_MINOR_CedarAsync 0
-#define COCOAPODS_VERSION_PATCH_CedarAsync 1
-
 // CocoaLumberjack
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
 #define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
@@ -36,9 +30,21 @@
 #define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 7
 #define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 0
 
+// Expecta
+#define COCOAPODS_POD_AVAILABLE_Expecta
+#define COCOAPODS_VERSION_MAJOR_Expecta 0
+#define COCOAPODS_VERSION_MINOR_Expecta 2
+#define COCOAPODS_VERSION_PATCH_Expecta 3
+
 // LXReorderableCollectionViewFlowLayout
 #define COCOAPODS_POD_AVAILABLE_LXReorderableCollectionViewFlowLayout
 #define COCOAPODS_VERSION_MAJOR_LXReorderableCollectionViewFlowLayout 0
 #define COCOAPODS_VERSION_MINOR_LXReorderableCollectionViewFlowLayout 1
 #define COCOAPODS_VERSION_PATCH_LXReorderableCollectionViewFlowLayout 1
+
+// OCMock
+#define COCOAPODS_POD_AVAILABLE_OCMock
+#define COCOAPODS_VERSION_MAJOR_OCMock 2
+#define COCOAPODS_VERSION_MINOR_OCMock 2
+#define COCOAPODS_VERSION_PATCH_OCMock 2
 

@@ -15,7 +15,16 @@
 @property (nonatomic, strong) UIColor *inactiveNameColor;
 @property (nonatomic, strong) UIColor *activeTimerColor;
 @property (nonatomic, strong) UIColor *inactiveTimerColor;
-@property (nonatomic, strong) UIColor *disclosureColor;
+@property (nonatomic, strong) UIColor *progressColor;
 @property (nonatomic, strong) UIColor *textFieldBgColor;
+
+
++ (GTPlayerColor*)bgColor:(UIColor*)bgColor
+        inactiveNameColor:(UIColor*)inactiveNameColor
+          activeNameColor:(UIColor*)activeNameColor
+         activeTimerColor:(UIColor*)activeTimerColor
+       inactiveTimerColor:(UIColor*)inactiveTimerColor
+            progressColor:(UIColor*)progressColor
+         textFieldBgColor:(UIColor*)textFieldBgColor;
 
 @end
