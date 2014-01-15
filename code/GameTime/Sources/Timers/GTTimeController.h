@@ -15,6 +15,7 @@ extern NSString* const kGGTimeSubTicNotification;
 
 @interface GTTimeController : NSObject
 
--(void)start;
+- (void)start;
+- (void)stop;
 
 @end

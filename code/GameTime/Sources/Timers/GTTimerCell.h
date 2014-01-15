@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class GTTimer;
+@class GTProgressView;
 
 @interface GTTimerCell : UICollectionViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *timerLabel;
-@property (nonatomic, strong) IBOutlet UIView *progressView;
+@property (nonatomic, strong) IBOutlet GTProgressView *progressView;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *progressViewWidthConstraint;
 
 @property (nonatomic, strong) GTTimer *timer;

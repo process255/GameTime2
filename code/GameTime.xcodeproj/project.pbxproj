@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		14035754187A74B60002E307 /* UIScreen+GTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14035753187A74B60002E307 /* UIScreen+GTAdditions.m */; };
+		141C740B1884916700C157CA /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 141C740A1884916700C157CA /* SKTAudio.m */; };
+		141C740E18849FD100C157CA /* GTTimerSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 141C740D18849FD100C157CA /* GTTimerSound.m */; };
+		141C74111884B85C00C157CA /* GTProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 141C74101884B85C00C157CA /* GTProgressView.m */; };
 		141F7117187E03FE00F664BD /* GTPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 141F7116187E03FE00F664BD /* GTPreferences.m */; };
 		141F711E187E0D5000F664BD /* GTTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 141F711D187E0D5000F664BD /* GTTimeHelper.m */; };
 		142B8D731880B01800FEDCDE /* GTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B8D721880B01800FEDCDE /* GTSettingsViewController.m */; };
 		14391011187BB5320003F2A1 /* UIColor+GTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14391010187BB5320003F2A1 /* UIColor+GTAdditions.m */; };
 		14391014187BBEA00003F2A1 /* GTPlayerColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14391013187BBEA00003F2A1 /* GTPlayerColor.m */; };
+		14787C821881B77A00074D87 /* GTSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14787C811881B77A00074D87 /* GTSoundsViewController.m */; };
 		1480087B18721AAD002A20ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087A18721AAD002A20ED /* Foundation.framework */; };
 		1480087D18721AAD002A20ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087C18721AAD002A20ED /* CoreGraphics.framework */; };
 		1480087F18721AAD002A20ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087E18721AAD002A20ED /* UIKit.framework */; };
@@ -23,12 +27,6 @@
 		1480089118721AAD002A20ED /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480088F18721AAD002A20ED /* Main_iPad.storyboard */; };
 		1480089618721AAD002A20ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1480089518721AAD002A20ED /* Images.xcassets */; };
 		1491B8661880828100355A0F /* GTTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491B8651880828100355A0F /* GTTimeController.m */; };
-		1491B86E1880A24900355A0F /* alarm-clock-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1491B8681880A24900355A0F /* alarm-clock-01.wav */; };
-		1491B86F1880A24900355A0F /* small-bell-ringing-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1491B8691880A24900355A0F /* small-bell-ringing-02.wav */; };
-		1491B8701880A24900355A0F /* bell-ringing-05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1491B86A1880A24900355A0F /* bell-ringing-05.wav */; };
-		1491B8711880A24900355A0F /* fail-buzzer-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1491B86B1880A24900355A0F /* fail-buzzer-02.wav */; };
-		1491B8721880A24900355A0F /* fail-buzzer-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1491B86C1880A24900355A0F /* fail-buzzer-01.wav */; };
-		1491B8731880A24900355A0F /* fail-buzzer-04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1491B86D1880A24900355A0F /* fail-buzzer-04.wav */; };
 		1491B8761880A9FA00355A0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1491B8751880A9FA00355A0F /* Images.xcassets */; };
 		1491C4A1187756DB003A762B /* GTTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4A0187756DB003A762B /* GTTimerViewController.m */; };
 		1491C4A71878BCFD003A762B /* GTTimerCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4A61878BCFD003A762B /* GTTimerCollectionDataSource.m */; };
@@ -38,6 +36,12 @@
 		1491C4B5187A10BF003A762B /* GTTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4B4187A10BF003A762B /* GTTimerCell.m */; };
 		1491C4B8187A11C8003A762B /* GTTimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4B7187A11C8003A762B /* GTTimerSpec.m */; };
 		1491C4BA187A124E003A762B /* GTTimerCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491C4B9187A124E003A762B /* GTTimerCellSpec.m */; };
+		14BB6AFE1884401500FF0C7F /* alarm-clock-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 14BB6AF81884401500FF0C7F /* alarm-clock-01.wav */; };
+		14BB6AFF1884401500FF0C7F /* bell-ringing-05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 14BB6AF91884401500FF0C7F /* bell-ringing-05.wav */; };
+		14BB6B001884401500FF0C7F /* fail-buzzer-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 14BB6AFA1884401500FF0C7F /* fail-buzzer-01.wav */; };
+		14BB6B011884401500FF0C7F /* fail-buzzer-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 14BB6AFB1884401500FF0C7F /* fail-buzzer-02.wav */; };
+		14BB6B021884401500FF0C7F /* fail-buzzer-04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 14BB6AFC1884401500FF0C7F /* fail-buzzer-04.wav */; };
+		14BB6B031884401500FF0C7F /* small-bell-ringing-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 14BB6AFD1884401500FF0C7F /* small-bell-ringing-02.wav */; };
 		14E1BC741874D9E2003B72DA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E1BC731874D9E2003B72DA /* SenTestingKit.framework */; };
 		14E1BC751874D9E2003B72DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087C18721AAD002A20ED /* CoreGraphics.framework */; };
 		14E1BC761874D9E2003B72DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087E18721AAD002A20ED /* UIKit.framework */; };
@@ -51,6 +55,12 @@
 		05BE619DC91A4D2AAEA05A6E /* Pods-GameTimeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameTimeTests.xcconfig"; path = "Pods/Pods-GameTimeTests.xcconfig"; sourceTree = "<group>"; };
 		14035752187A74B60002E307 /* UIScreen+GTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+GTAdditions.h"; sourceTree = "<group>"; };
 		14035753187A74B60002E307 /* UIScreen+GTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+GTAdditions.m"; sourceTree = "<group>"; };
+		141C74091884916700C157CA /* SKTAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTAudio.h; sourceTree = "<group>"; };
+		141C740A1884916700C157CA /* SKTAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTAudio.m; sourceTree = "<group>"; };
+		141C740C18849FD100C157CA /* GTTimerSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerSound.h; sourceTree = "<group>"; };
+		141C740D18849FD100C157CA /* GTTimerSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerSound.m; sourceTree = "<group>"; };
+		141C740F1884B85C00C157CA /* GTProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTProgressView.h; sourceTree = "<group>"; };
+		141C74101884B85C00C157CA /* GTProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTProgressView.m; sourceTree = "<group>"; };
 		141F7115187E03FE00F664BD /* GTPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPreferences.h; sourceTree = "<group>"; };
 		141F7116187E03FE00F664BD /* GTPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPreferences.m; sourceTree = "<group>"; };
 		141F711C187E0D5000F664BD /* GTTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimeHelper.h; sourceTree = "<group>"; };
@@ -61,6 +71,8 @@
 		14391010187BB5320003F2A1 /* UIColor+GTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GTAdditions.m"; sourceTree = "<group>"; };
 		14391012187BBEA00003F2A1 /* GTPlayerColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPlayerColor.h; sourceTree = "<group>"; };
 		14391013187BBEA00003F2A1 /* GTPlayerColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPlayerColor.m; sourceTree = "<group>"; };
+		14787C801881B77A00074D87 /* GTSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSoundsViewController.h; sourceTree = "<group>"; };
+		14787C811881B77A00074D87 /* GTSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSoundsViewController.m; sourceTree = "<group>"; };
 		1480087718721AAD002A20ED /* GameTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1480087A18721AAD002A20ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1480087C18721AAD002A20ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,12 +89,6 @@
 		1480089C18721AAD002A20ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1491B8641880828100355A0F /* GTTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimeController.h; sourceTree = "<group>"; };
 		1491B8651880828100355A0F /* GTTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimeController.m; sourceTree = "<group>"; };
-		1491B8681880A24900355A0F /* alarm-clock-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "alarm-clock-01.wav"; sourceTree = "<group>"; };
-		1491B8691880A24900355A0F /* small-bell-ringing-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "small-bell-ringing-02.wav"; sourceTree = "<group>"; };
-		1491B86A1880A24900355A0F /* bell-ringing-05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bell-ringing-05.wav"; sourceTree = "<group>"; };
-		1491B86B1880A24900355A0F /* fail-buzzer-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "fail-buzzer-02.wav"; sourceTree = "<group>"; };
-		1491B86C1880A24900355A0F /* fail-buzzer-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "fail-buzzer-01.wav"; sourceTree = "<group>"; };
-		1491B86D1880A24900355A0F /* fail-buzzer-04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "fail-buzzer-04.wav"; sourceTree = "<group>"; };
 		1491B8751880A9FA00355A0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1491C49F187756DB003A762B /* GTTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerViewController.h; sourceTree = "<group>"; };
 		1491C4A0187756DB003A762B /* GTTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerViewController.m; sourceTree = "<group>"; };
@@ -96,6 +102,12 @@
 		1491C4B4187A10BF003A762B /* GTTimerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerCell.m; sourceTree = "<group>"; };
 		1491C4B7187A11C8003A762B /* GTTimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerSpec.m; sourceTree = "<group>"; };
 		1491C4B9187A124E003A762B /* GTTimerCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerCellSpec.m; sourceTree = "<group>"; };
+		14BB6AF81884401500FF0C7F /* alarm-clock-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "alarm-clock-01.wav"; sourceTree = "<group>"; };
+		14BB6AF91884401500FF0C7F /* bell-ringing-05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bell-ringing-05.wav"; sourceTree = "<group>"; };
+		14BB6AFA1884401500FF0C7F /* fail-buzzer-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "fail-buzzer-01.wav"; sourceTree = "<group>"; };
+		14BB6AFB1884401500FF0C7F /* fail-buzzer-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "fail-buzzer-02.wav"; sourceTree = "<group>"; };
+		14BB6AFC1884401500FF0C7F /* fail-buzzer-04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "fail-buzzer-04.wav"; sourceTree = "<group>"; };
+		14BB6AFD1884401500FF0C7F /* small-bell-ringing-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "small-bell-ringing-02.wav"; sourceTree = "<group>"; };
 		14E1BC721874D9E2003B72DA /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E1BC731874D9E2003B72DA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		14E1BC7A1874D9E2003B72DA /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
@@ -153,6 +165,17 @@
 				142B8D721880B01800FEDCDE /* GTSettingsViewController.m */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		14787C7F1881B72F00074D87 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				141C74091884916700C157CA /* SKTAudio.h */,
+				141C740A1884916700C157CA /* SKTAudio.m */,
+				14787C801881B77A00074D87 /* GTSoundsViewController.h */,
+				14787C811881B77A00074D87 /* GTSoundsViewController.m */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		1480086E18721AAC002A20ED = {
@@ -221,13 +244,8 @@
 		1491B8671880A22500355A0F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14BB6AF718843FC000FF0C7F /* Sounds */,
 				1491B8741880A9D600355A0F /* Images */,
-				1491B8681880A24900355A0F /* alarm-clock-01.wav */,
-				1491B8691880A24900355A0F /* small-bell-ringing-02.wav */,
-				1491B86A1880A24900355A0F /* bell-ringing-05.wav */,
-				1491B86B1880A24900355A0F /* fail-buzzer-02.wav */,
-				1491B86C1880A24900355A0F /* fail-buzzer-01.wav */,
-				1491B86D1880A24900355A0F /* fail-buzzer-04.wav */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -243,6 +261,7 @@
 		1491C49C18775654003A762B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				14787C7F1881B72F00074D87 /* Sounds */,
 				142B8D6D1880AD7700FEDCDE /* Settings */,
 				14035751187A748D0002E307 /* Categories */,
 				1491C4AD187A0FE1003A762B /* Model */,
@@ -262,6 +281,8 @@
 				1491C4A61878BCFD003A762B /* GTTimerCollectionDataSource.m */,
 				1491C4B3187A10BF003A762B /* GTTimerCell.h */,
 				1491C4B4187A10BF003A762B /* GTTimerCell.m */,
+				141C740F1884B85C00C157CA /* GTProgressView.h */,
+				141C74101884B85C00C157CA /* GTProgressView.m */,
 			);
 			path = Timers;
 			sourceTree = "<group>";
@@ -296,6 +317,8 @@
 				141F7116187E03FE00F664BD /* GTPreferences.m */,
 				141F711C187E0D5000F664BD /* GTTimeHelper.h */,
 				141F711D187E0D5000F664BD /* GTTimeHelper.m */,
+				141C740C18849FD100C157CA /* GTTimerSound.h */,
+				141C740D18849FD100C157CA /* GTTimerSound.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +330,19 @@
 			);
 			name = " Model";
 			path = Model;
+			sourceTree = "<group>";
+		};
+		14BB6AF718843FC000FF0C7F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				14BB6AF81884401500FF0C7F /* alarm-clock-01.wav */,
+				14BB6AF91884401500FF0C7F /* bell-ringing-05.wav */,
+				14BB6AFA1884401500FF0C7F /* fail-buzzer-01.wav */,
+				14BB6AFB1884401500FF0C7F /* fail-buzzer-02.wav */,
+				14BB6AFC1884401500FF0C7F /* fail-buzzer-04.wav */,
+				14BB6AFD1884401500FF0C7F /* small-bell-ringing-02.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		14E1BC781874D9E2003B72DA /* Specs */ = {
@@ -404,17 +440,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1491B8731880A24900355A0F /* fail-buzzer-04.wav in Resources */,
-				1491B8711880A24900355A0F /* fail-buzzer-02.wav in Resources */,
+				14BB6B021884401500FF0C7F /* fail-buzzer-04.wav in Resources */,
+				14BB6AFE1884401500FF0C7F /* alarm-clock-01.wav in Resources */,
+				14BB6B031884401500FF0C7F /* small-bell-ringing-02.wav in Resources */,
+				14BB6B011884401500FF0C7F /* fail-buzzer-02.wav in Resources */,
 				1480089118721AAD002A20ED /* Main_iPad.storyboard in Resources */,
-				1491B8721880A24900355A0F /* fail-buzzer-01.wav in Resources */,
 				1491B8761880A9FA00355A0F /* Images.xcassets in Resources */,
 				1480089618721AAD002A20ED /* Images.xcassets in Resources */,
-				1491B86E1880A24900355A0F /* alarm-clock-01.wav in Resources */,
 				1480088E18721AAD002A20ED /* Timers_iPhone.storyboard in Resources */,
-				1491B86F1880A24900355A0F /* small-bell-ringing-02.wav in Resources */,
-				1491B8701880A24900355A0F /* bell-ringing-05.wav in Resources */,
+				14BB6AFF1884401500FF0C7F /* bell-ringing-05.wav in Resources */,
 				1480088518721AAD002A20ED /* InfoPlist.strings in Resources */,
+				14BB6B001884401500FF0C7F /* fail-buzzer-01.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,8 +548,11 @@
 				1491C4B0187A1016003A762B /* GTTimer.m in Sources */,
 				14391014187BBEA00003F2A1 /* GTPlayerColor.m in Sources */,
 				1480088718721AAD002A20ED /* main.m in Sources */,
+				14787C821881B77A00074D87 /* GTSoundsViewController.m in Sources */,
+				141C740B1884916700C157CA /* SKTAudio.m in Sources */,
 				141F7117187E03FE00F664BD /* GTPreferences.m in Sources */,
 				14391011187BB5320003F2A1 /* UIColor+GTAdditions.m in Sources */,
+				141C74111884B85C00C157CA /* GTProgressView.m in Sources */,
 				141F711E187E0D5000F664BD /* GTTimeHelper.m in Sources */,
 				1491C4B5187A10BF003A762B /* GTTimerCell.m in Sources */,
 				14035754187A74B60002E307 /* UIScreen+GTAdditions.m in Sources */,
@@ -521,6 +560,7 @@
 				1491C4A1187756DB003A762B /* GTTimerViewController.m in Sources */,
 				1491C4A71878BCFD003A762B /* GTTimerCollectionDataSource.m in Sources */,
 				1491B8661880828100355A0F /* GTTimeController.m in Sources */,
+				141C740E18849FD100C157CA /* GTTimerSound.m in Sources */,
 				142B8D731880B01800FEDCDE /* GTSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

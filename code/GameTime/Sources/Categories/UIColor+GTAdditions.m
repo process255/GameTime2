@@ -20,4 +20,20 @@
     return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:alpha];
 }
 
+- (UIColor*)withBrightness:(CGFloat)newBrightness
+{
+    CGFloat hue;
+    CGFloat saturation;
+    CGFloat brightness;
+    CGFloat alpha;
+    BOOL success = [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+    if (success)
+    {
+        brightness = newBrightness;
+    }
+    brightness = fmaxf(brightness, 0.0);
+    
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
+}
+
 @end

@@ -53,6 +53,8 @@
     }
 }
 
+
+
 - (BOOL)collectionView:(UICollectionView *)collectionView
 canMoveItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -83,7 +85,21 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake([UIScreen screenWidth], self.collectionView.frame.size.height / [GTPreferences sharedInstance].numberOfPlayers);
+    DDLogVerbose(@"collectionView size = %@", NSStringFromCGSize(self.collectionView.frame.size));
+    
+    DDLogVerbose(@"orientation = %d", UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation));
+    
+    if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
+    {
+        return CGSizeMake(self.collectionView.frame.size.width / 2, self.collectionView.frame.size.height / ceil(([GTPreferences sharedInstance].numberOfPlayers / 2.0)));        
+    }
+    else
+    {
+        return CGSizeMake([UIScreen screenWidth], self.collectionView.frame.size.height / [GTPreferences sharedInstance].numberOfPlayers);
+    }
+    
+    DDLogVerbose(@"screeWidth = %f, screeHeight = %f", [UIScreen screenWidth], [UIScreen screenHeight]);
+    
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView
@@ -92,6 +108,21 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0;
 }
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(UICollectionViewLayout *)collectionViewLayout
+minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+                        layout:(UICollectionViewLayout*)collectionViewLayout
+        insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsZero;
+}
+
 
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath

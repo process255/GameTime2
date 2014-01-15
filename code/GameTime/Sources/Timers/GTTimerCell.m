@@ -12,6 +12,17 @@
 #import "GTPreferences.h"
 #import "GTTimeHelper.h"
 #import "GTPlayerColor.h"
+#import <QuartzCore/QuartzCore.h>
+#import "UIColor+GTAdditions.h"
+#import "GTProgressView.h"
+#import "GTTimerSound.h"
+#import "SKTAudio.h"
+
+@interface GTTimerCell()
+
+@property (nonatomic, readonly) CAGradientLayer *gradientLayer;
+
+@end
 
 
 @implementation GTTimerCell
@@ -50,7 +61,9 @@
             {
                 if(self.timer.timeInSeconds == 1)
                 {
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:kPlayBellSoundNotification object:self];
+                    GTTimerSound *timerSound = [GTPreferences sharedInstance].timerSounds[[GTPreferences sharedInstance].timerSound];
+                    [[SKTAudio sharedInstance] playSoundEffect:timerSound.file
+                                                        volume:[GTPreferences sharedInstance].volume];
                 }
                 [self updateTimer:self.timer.timeInSeconds - 1 shouldSave:YES updateSubTime:NO];
             }
@@ -60,12 +73,17 @@
         {
             if(self.timer.timeInSeconds > 0)
             {
+                
                 if(self.timer.timeInSeconds == 1)
                 {
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:kPlayBellSoundNotification object:self];
+                    GTTimerSound *timerSound = [GTPreferences sharedInstance].timerSounds[[GTPreferences sharedInstance].timerSound];
+                    [[SKTAudio sharedInstance] playSoundEffect:timerSound.file
+                                                        volume:[GTPreferences sharedInstance].volume];
+                    [self setInactive];
                 }
                 [self updateTimer:self.timer.timeInSeconds - 1 shouldSave:YES updateSubTime:NO];
             }
+            
             break;
         }
         case GTTimerTypeCountUp:
@@ -87,14 +105,20 @@
             {
                 self.timer.subTime -= kSubTimeIncrement;
             }
-            CGFloat timeLeftAsFloat = self.timer.subTime / (CGFloat)[GTPreferences sharedInstance].countDownTime;
-            CGFloat width = self.frame.size.width - (self.frame.size.width * timeLeftAsFloat);
-            self.progressViewWidthConstraint.constant = width;
+            [self updateProgressView];
             break;
         }
         case GTTimerTypeCountUp:
             break;
     }
+}
+
+- (void)updateProgressView
+{
+    CGFloat timeLeftAsFloat = self.timer.subTime / (CGFloat)[GTPreferences sharedInstance].countDownTime;
+    
+    CGFloat width = self.frame.size.width - (self.frame.size.width * timeLeftAsFloat);
+    self.progressViewWidthConstraint.constant = width;
 }
 
 #pragma mark - Public Methods
@@ -111,12 +135,14 @@
 
 - (void)setActive
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTimerStartTapped object:self];
     self.timer.state = GTTimerStateStarted;
     [[GTPreferences sharedInstance] saveTimer:self.timer];
 }
 
 - (void)setInactive
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTimerStopTapped object:self];
     self.timer.state = GTTimerStatePaused;
     [[GTPreferences sharedInstance] saveTimer:self.timer];
 }
@@ -144,14 +170,32 @@
 
 #pragma mark - Getters/Setters
 
++ (Class)layerClass
+{
+    return [CAGradientLayer class];
+}
+
+- (CAGradientLayer *)gradientLayer
+{
+    return (CAGradientLayer *)self.layer;
+}
+
 - (void)setTimer:(GTTimer *)timer
 {
     _timer = nil;
     _timer = timer;
     self.nameLabel.text = timer.name;
     self.timerLabel.text = [GTTimeHelper timeAsHoursMinutesSeconds:timer.timeInSeconds forceHours:NO];
-    self.contentView.backgroundColor = timer.playerColor.rowBackgroundColor;
-    self.progressView.backgroundColor = timer.playerColor.progressColor;
+    
+    self.gradientLayer.startPoint = CGPointMake(0, 0.5);
+    self.gradientLayer.endPoint   = CGPointMake(1, 0.5);
+   
+    UIColor *darkerColor = [timer.playerColor.rowBackgroundColor withBrightness:.85];
+    
+    self.gradientLayer.colors = @[(id)[darkerColor CGColor], (id)[timer.playerColor.rowBackgroundColor CGColor]];
+    self.progressView.color = timer.playerColor.rowBackgroundColor;
+    
+    
 }
 
 @end

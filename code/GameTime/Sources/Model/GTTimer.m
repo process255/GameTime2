@@ -25,7 +25,8 @@
     timer.type = [GTPreferences sharedInstance].timerType;
     timer.state = GTTimerStatePaused;
     timer.position = player;
-    switch (timer.type) {
+    switch (timer.type)
+    {
             case GTTimerTypeCountDown:
             case GTTimerTypeCoundDownByTurn:
             timer.timeInSeconds = [GTPreferences sharedInstance].countDownTime;
@@ -50,6 +51,7 @@
     [encoder encodeInteger:self.position forKey:@"position"];
     [encoder encodeInteger:self.timeInSeconds forKey:@"timeInSeconds"];
     [encoder encodeFloat:self.subTime forKey:@"subTime"];
+    [encoder encodeFloat:self.startTimeOffset forKey:@"startTimeOffset"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -64,8 +66,19 @@
         self.position = [decoder decodeIntegerForKey:@"position"];
         self.timeInSeconds = [decoder decodeIntegerForKey:@"timeInSeconds"];
         self.subTime = [decoder decodeFloatForKey:@"subTime"];
+        self.startTimeOffset = [decoder decodeFloatForKey:@"startTimeOffset"];
     }
     return self;
 }
+
+#pragma mark - Getters/Setters
+
+//- (NSTimer*)timer
+//{
+//    if (!_timer)
+//    {
+//        _timer = [NSTimer timerWithTimeInterval:1.0 invocation:<#(NSInvocation *)#> repeats:<#(BOOL)#>]
+//    }
+//}
 
 @end

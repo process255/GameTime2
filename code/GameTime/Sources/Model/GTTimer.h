@@ -32,6 +32,8 @@ typedef enum GTTimerType {
 @property (nonatomic, assign) GTTimerState state;
 @property (nonatomic, assign) NSUInteger timeInSeconds;
 @property (nonatomic, assign) CGFloat subTime;
+@property (nonatomic, assign) CGFloat startTimeOffset;
+@property (nonatomic, strong) NSTimer *timer;
 
 + (GTTimer*)timerWith:(NSInteger)player;
 

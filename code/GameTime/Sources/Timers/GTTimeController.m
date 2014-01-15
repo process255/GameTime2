@@ -27,17 +27,7 @@ NSString* const kGGTimeSubTicNotification = @"kGGTimeSubTicNotification";
     self = [super init];
     if (self)
     {
-       self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                     target:self
-                                                   selector:@selector(timerTic:)
-                                                   userInfo:nil
-                                                    repeats:YES];
-        
-        self.subTimer = [NSTimer scheduledTimerWithTimeInterval:kSubTimeIncrement
-                                                         target:self
-                                                       selector:@selector(subTimerTic:)
-                                                       userInfo:nil
-                                                        repeats:YES];
+       
     }
     
     return self;
@@ -54,13 +44,39 @@ NSString* const kGGTimeSubTicNotification = @"kGGTimeSubTicNotification";
     [[NSNotificationCenter defaultCenter] postNotificationName:kGGTimeSubTicNotification object:self.subTimer];
 }
 
+#pragma mark - Public Methods
+
 - (void)start
 {
+    [self stop];
     
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                  target:self
+                                                selector:@selector(timerTic:)
+                                                userInfo:nil
+                                                 repeats:YES];
+    
+    self.subTimer = [NSTimer scheduledTimerWithTimeInterval:kSubTimeIncrement
+                                                     target:self
+                                                   selector:@selector(subTimerTic:)
+                                                   userInfo:nil
+                                                    repeats:YES];
 }
 
-#pragma mark - Getters/Setters
-
+- (void)stop
+{
+    if (self.timer && [self.timer isValid])
+    {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    
+    if (self.subTimer && [self.subTimer isValid])
+    {
+        [self.subTimer invalidate];
+        self.subTimer = nil;
+    }
+}
 
 
 @end

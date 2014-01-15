@@ -25,7 +25,9 @@
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     
     [self setupLogger];
- 
+    
+    [self setupObservers];
+    
     [GTPreferences sharedInstance].numberOfPlayers = [GTPreferences sharedInstance].numberOfPlayers;
     
     self.timeController = [[GTTimeController alloc] init];
@@ -54,6 +56,33 @@
     // verbose test
     DDLogVerbose(@"Sample Verbose");
 }
+
+- (void)setupObservers
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(timerStartTapped:)
+                                                 name:kTimerStartTapped
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(timerStopTapped:)
+                                                 name:kTimerStopTapped
+                                               object:nil];
+}
+
+
+#pragma mark - Observers
+
+- (void)timerStopTapped:(NSNotification*)note
+{
+    [self.timeController stop];
+}
+
+- (void)timerStartTapped:(NSNotification*)note
+{
+    [self.timeController start];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

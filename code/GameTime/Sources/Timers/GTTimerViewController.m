@@ -23,16 +23,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Timers", nil);
+    self.title = NSLocalizedString(@"Board Game Time", nil);
     self.collectionView.dataSource = self.dataSource;
     self.collectionView.delegate = self.dataSource;
     self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    [self.collectionView reloadData];
 }
 
 #pragma mark - IBActions

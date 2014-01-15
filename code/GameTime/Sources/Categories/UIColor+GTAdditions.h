@@ -12,5 +12,6 @@
 
 + (UIColor*)hex:(NSInteger)hex;
 + (UIColor*)hex:(NSInteger)hex alpha:(CGFloat)alpha;
+- (UIColor*)withBrightness:(CGFloat)newBrightness;
 
 @end
