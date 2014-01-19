@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 7
 #define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 0
 
+// InfColorPicker
+#define COCOAPODS_POD_AVAILABLE_InfColorPicker
+#define COCOAPODS_VERSION_MAJOR_InfColorPicker 0
+#define COCOAPODS_VERSION_MINOR_InfColorPicker 0
+#define COCOAPODS_VERSION_PATCH_InfColorPicker 1
+
 // LXReorderableCollectionViewFlowLayout
 #define COCOAPODS_POD_AVAILABLE_LXReorderableCollectionViewFlowLayout
 #define COCOAPODS_VERSION_MAJOR_LXReorderableCollectionViewFlowLayout 0

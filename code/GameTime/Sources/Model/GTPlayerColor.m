@@ -16,7 +16,8 @@
          activeTimerColor:(UIColor*)activeTimerColor
        inactiveTimerColor:(UIColor*)inactiveTimerColor
             progressColor:(UIColor*)progressColor
-         textFieldBgColor:(UIColor*)textFieldBgColor {
+         textFieldBgColor:(UIColor*)textFieldBgColor
+{
     
     GTPlayerColor* playerColor = [[GTPlayerColor alloc] init];
     playerColor.rowBackgroundColor = bgColor;

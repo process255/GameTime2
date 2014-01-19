@@ -21,17 +21,18 @@
 @interface GTTimerCell()
 
 @property (nonatomic, readonly) CAGradientLayer *gradientLayer;
+@property (strong, nonatomic) UITapGestureRecognizer *doubleTapGesture;
 
 @end
 
 
 @implementation GTTimerCell
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
+
     }
     return self;
 }
@@ -116,7 +117,6 @@
 - (void)updateProgressView
 {
     CGFloat timeLeftAsFloat = self.timer.subTime / (CGFloat)[GTPreferences sharedInstance].countDownTime;
-    
     CGFloat width = self.frame.size.width - (self.frame.size.width * timeLeftAsFloat);
     self.progressViewWidthConstraint.constant = width;
 }
@@ -135,6 +135,8 @@
 
 - (void)setActive
 {
+    self.nameLabel.font = [UIFont activeNameFont];
+    self.timerLabel.font = [UIFont activeTimerFont];
     [[NSNotificationCenter defaultCenter] postNotificationName:kTimerStartTapped object:self];
     self.timer.state = GTTimerStateStarted;
     [[GTPreferences sharedInstance] saveTimer:self.timer];
@@ -142,9 +144,11 @@
 
 - (void)setInactive
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:kTimerStopTapped object:self];
     self.timer.state = GTTimerStatePaused;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTimerStopTapped object:self];
     [[GTPreferences sharedInstance] saveTimer:self.timer];
+    self.nameLabel.font = [UIFont nameFont];
+    self.timerLabel.font = [UIFont timerFont];
 }
 
 
@@ -184,18 +188,24 @@
 {
     _timer = nil;
     _timer = timer;
+
+    UIColor *darkerColor = [timer.playerColor.rowBackgroundColor darker];
+
+    self.nameLabel.font = [UIFont nameFont];
+    self.timerLabel.font = [UIFont timerFont];
+    
+    self.timerLabel.textColor = [darkerColor compatibleContrastedColor];
+    self.nameLabel.textColor = [timer.playerColor.rowBackgroundColor compatibleContrastedColor];
     self.nameLabel.text = timer.name;
     self.timerLabel.text = [GTTimeHelper timeAsHoursMinutesSeconds:timer.timeInSeconds forceHours:NO];
     
     self.gradientLayer.startPoint = CGPointMake(0, 0.5);
     self.gradientLayer.endPoint   = CGPointMake(1, 0.5);
-   
-    UIColor *darkerColor = [timer.playerColor.rowBackgroundColor withBrightness:.85];
-    
+
     self.gradientLayer.colors = @[(id)[darkerColor CGColor], (id)[timer.playerColor.rowBackgroundColor CGColor]];
     self.progressView.color = timer.playerColor.rowBackgroundColor;
-    
-    
+
+    [self updateProgressView];
 }
 
 @end

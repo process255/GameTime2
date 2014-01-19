@@ -36,5 +36,6 @@ typedef enum GTTimerType {
 @property (nonatomic, strong) NSTimer *timer;
 
 + (GTTimer*)timerWith:(NSInteger)player;
++ (NSArray*)timerTypes;
 
 @end

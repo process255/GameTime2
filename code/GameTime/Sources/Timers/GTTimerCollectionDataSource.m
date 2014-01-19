@@ -13,14 +13,30 @@
 #import "GTTimeHelper.h"
 #import "GTPreferences.h"
 
-@interface GTTimerCollectionDataSource ()
+#import "GTTimerSettingsViewController.h"
 
-@property (strong, nonatomic) NSMutableArray *timers;
+@interface GTTimerCollectionDataSource ()
 
 @end
 
 
 @implementation GTTimerCollectionDataSource
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
+#pragma mark - Public Methods
+
+- (void)openTimerPreferencesAtIndexPath:(NSIndexPath *)indexPath
+{
+    GTTimer *timer = [self.timers objectAtIndex:indexPath.item];
+    [self openTimerPreferences:timer];
+}
 
 #pragma mark - LXReorderableCollectionViewDataSource methods
 
@@ -85,11 +101,7 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DDLogVerbose(@"collectionView size = %@", NSStringFromCGSize(self.collectionView.frame.size));
-    
-    DDLogVerbose(@"orientation = %d", UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation));
-    
-    if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
+    if(UIDeviceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
     {
         return CGSizeMake(self.collectionView.frame.size.width / 2, self.collectionView.frame.size.height / ceil(([GTPreferences sharedInstance].numberOfPlayers / 2.0)));        
     }
@@ -97,9 +109,6 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath
     {
         return CGSizeMake([UIScreen screenWidth], self.collectionView.frame.size.height / [GTPreferences sharedInstance].numberOfPlayers);
     }
-    
-    DDLogVerbose(@"screeWidth = %f, screeHeight = %f", [UIScreen screenWidth], [UIScreen screenHeight]);
-    
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView
@@ -133,6 +142,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     {
         case GTTimerStatePaused:
         case GTTimerStateStopped:
+//            [self openTimerPreferences:timer];
             [timerCell setActive];
             break;
         case GTTimerStateStarted:
@@ -148,6 +158,16 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     GTTimerCell *timerCell = (GTTimerCell *)cell;
     [timerCell stop];
+}
+
+#pragma mark - Private Methods
+
+- (void)openTimerPreferences:(GTTimer*)timer
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Timers_iPhone" bundle:nil];
+    GTTimerSettingsViewController *controller = [sb instantiateViewControllerWithIdentifier:NSStringFromClass([GTTimerSettingsViewController class])];
+    controller.timer = timer;
+    [self.controller.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - Getters/Setters
@@ -168,8 +188,6 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     }
     return _timers;
 }
-
-#pragma mark - Private Methods
 
 
 @end

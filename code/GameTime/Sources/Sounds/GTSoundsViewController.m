@@ -10,15 +10,13 @@
 #import "GTPreferences.h"
 #import "SKTAudio.h"
 #import "GTTimerSound.h"
+#import "SingleSectionArrayDataSource.h"
+#import "UITableViewCell+SoundCell.h"
+
 
 @interface GTSoundsViewController ()
 
-@property (nonatomic, weak) IBOutlet UILabel *sound1Label;
-@property (nonatomic, weak) IBOutlet UILabel *sound2Label;
-@property (nonatomic, weak) IBOutlet UILabel *sound3Label;
-@property (nonatomic, weak) IBOutlet UILabel *sound4Label;
-@property (nonatomic, weak) IBOutlet UILabel *sound5Label;
-@property (nonatomic, weak) IBOutlet UILabel *sound6Label;
+@property (nonatomic, strong) SingleSectionArrayDataSource *dataSource;
 
 @end
 
@@ -30,13 +28,29 @@
 {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Timer End", nil);
-    
+
+    [self setupDataSource];
+
+    self.dataSource.items = [GTPreferences sharedInstance].timerSounds;
+    [self.tableView reloadData];
+}
+
+- (void)setupDataSource {
+    self.dataSource =
+    [[SingleSectionArrayDataSource alloc] initWithItems:[GTPreferences sharedInstance].timerSounds
+                                         cellIdentifier:@"SoundCell"
+                                     configureCellBlock:^(UITableViewCell *cell, GTTimerSound *timerSound, NSIndexPath *indexPath) {
+                                              [cell configureForTimerSound:timerSound indexPath:indexPath];
+                                          }
+                                     sectionHeaderTitle:NSLocalizedString(@"Sounds", nil)
+                                     sectionFooterTitle:nil];
+
+    self.tableView.dataSource = self.dataSource;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self setupSelectedRow];
     [self setupObservers];
 }
 
@@ -44,13 +58,6 @@
 {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
- - (void)setupSelectedRow
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[GTPreferences sharedInstance].timerSound inSection:0];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
 - (void)setupObservers
@@ -64,17 +71,13 @@
 
 - (void)preferredFontChanged:(NSNotification *)notification
 {
-    self.sound1Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    self.sound2Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    self.sound3Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    self.sound4Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    self.sound5Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    self.sound6 Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    [self.tableView reloadData];
 }
 
-#pragma mark - Table view data source
 
--(void)tableView:(UITableView *)tableView
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSIndexPath *indexPathToDeselect = [NSIndexPath indexPathForRow:[GTPreferences sharedInstance].timerSound inSection:0];
@@ -89,7 +92,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [[SKTAudio sharedInstance] playSoundEffect:timerSound.file
                                         volume:[GTPreferences sharedInstance].volume];
     
-//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

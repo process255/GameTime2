@@ -81,4 +81,27 @@
 //    }
 //}
 
++ (NSArray*)timerTypes
+{
+    return @[
+             @{
+                 @"name" : NSLocalizedString(@"Count Down By Turn", @"counting down time each turn, button text"),
+                 @"description" : NSLocalizedString(@"Counts down for each player, resets automatically every turn.", @"description of couting down time each turn"),
+                 @"type" : @0
+              },
+
+             @{
+                 @"name" : NSLocalizedString(@"Count Down", @"counting down time, button text"),
+                 @"description" : NSLocalizedString(@"Counts down for each player over the entire game.", @"description of counting text down time"),
+                 @"type" : @1
+              },
+
+             @{
+                 @"name" : NSLocalizedString(@"Count Up", @"time counting up, button text"),
+                 @"description" : NSLocalizedString(@"Counts up for each player over the entire game.", @"description of time counting up"),
+                 @"type" : @2
+              }
+             ];
+}
+
 @end

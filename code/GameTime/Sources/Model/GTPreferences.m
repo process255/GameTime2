@@ -69,6 +69,7 @@ NSString* const kTimerStopTapped = @"kTimerStopTapped";
 
 - (void)setNumberOfPlayers:(NSUInteger)value
 {
+    
     if(_numberOfPlayers != value)
     {
         _numberOfPlayers = value;
@@ -227,6 +228,7 @@ NSString* const kTimerStopTapped = @"kTimerStopTapped";
 
 - (void)saveTimer:(GTTimer*)timer
 {
+    DDLogVerbose(@"saved timer color = %@", timer.playerColor.rowBackgroundColor);
     NSData *encodedTimer = [NSKeyedArchiver archivedDataWithRootObject:timer];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:encodedTimer forKey:[NSString stringWithFormat:@"player%luTimer", (unsigned long)timer.position]];

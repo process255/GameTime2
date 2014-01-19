@@ -18,6 +18,8 @@
     #import "DDASLLogger.h"
     #import "DDTTYLogger.h"
     #import "UIColor+GTAdditions.h"
+    #import "UIFont+GTAdditions.h"
+
 #endif
 
 #ifdef DEBUG

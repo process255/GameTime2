@@ -16,6 +16,7 @@
 		142B8D731880B01800FEDCDE /* GTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B8D721880B01800FEDCDE /* GTSettingsViewController.m */; };
 		14391011187BB5320003F2A1 /* UIColor+GTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14391010187BB5320003F2A1 /* UIColor+GTAdditions.m */; };
 		14391014187BBEA00003F2A1 /* GTPlayerColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14391013187BBEA00003F2A1 /* GTPlayerColor.m */; };
+		1459577C18889F8900B278E6 /* UIFont+GTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1459577B18889F8900B278E6 /* UIFont+GTAdditions.m */; };
 		14787C821881B77A00074D87 /* GTSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14787C811881B77A00074D87 /* GTSoundsViewController.m */; };
 		1480087B18721AAD002A20ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087A18721AAD002A20ED /* Foundation.framework */; };
 		1480087D18721AAD002A20ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087C18721AAD002A20ED /* CoreGraphics.framework */; };
@@ -47,6 +48,12 @@
 		14E1BC761874D9E2003B72DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087E18721AAD002A20ED /* UIKit.framework */; };
 		14E1BC771874D9E2003B72DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087A18721AAD002A20ED /* Foundation.framework */; };
 		14E1BC7D1874D9E2003B72DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14E1BC7B1874D9E2003B72DA /* InfoPlist.strings */; };
+		14FCCD331889AFBB009E8AA2 /* GTTimerSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD321889AFBB009E8AA2 /* GTTimerSettingsViewController.m */; };
+		14FCCD371889B82D009E8AA2 /* GTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD361889B82D009E8AA2 /* GTTextField.m */; };
+		14FCCD3A1889E99A009E8AA2 /* GTTimerTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD391889E99A009E8AA2 /* GTTimerTypeViewController.m */; };
+		14FCCD3D1889E9DE009E8AA2 /* GTTimerTypeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD3C1889E9DE009E8AA2 /* GTTimerTypeDataSource.m */; };
+		14FCCD41188B99E8009E8AA2 /* SingleSectionArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD40188B99E8009E8AA2 /* SingleSectionArrayDataSource.m */; };
+		14FCCD44188B9B56009E8AA2 /* UITableViewCell+SoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD43188B9B56009E8AA2 /* UITableViewCell+SoundCell.m */; };
 		AD4097F9DED04D8FAFDE9D8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E247E8C1494631ADBFFADD /* libPods.a */; };
 		DFEA8F2A11ED4E78B3E3A25B /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEAA780120143D4B37CD9DF /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
@@ -71,6 +78,8 @@
 		14391010187BB5320003F2A1 /* UIColor+GTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GTAdditions.m"; sourceTree = "<group>"; };
 		14391012187BBEA00003F2A1 /* GTPlayerColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPlayerColor.h; sourceTree = "<group>"; };
 		14391013187BBEA00003F2A1 /* GTPlayerColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPlayerColor.m; sourceTree = "<group>"; };
+		1459577A18889F8900B278E6 /* UIFont+GTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GTAdditions.h"; sourceTree = "<group>"; };
+		1459577B18889F8900B278E6 /* UIFont+GTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GTAdditions.m"; sourceTree = "<group>"; };
 		14787C801881B77A00074D87 /* GTSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSoundsViewController.h; sourceTree = "<group>"; };
 		14787C811881B77A00074D87 /* GTSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSoundsViewController.m; sourceTree = "<group>"; };
 		1480087718721AAD002A20ED /* GameTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +122,18 @@
 		14E1BC7A1874D9E2003B72DA /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		14E1BC7C1874D9E2003B72DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14E1BC831874D9E2003B72DA /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		14FCCD311889AFBB009E8AA2 /* GTTimerSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerSettingsViewController.h; sourceTree = "<group>"; };
+		14FCCD321889AFBB009E8AA2 /* GTTimerSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerSettingsViewController.m; sourceTree = "<group>"; };
+		14FCCD351889B82D009E8AA2 /* GTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTextField.h; sourceTree = "<group>"; };
+		14FCCD361889B82D009E8AA2 /* GTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTextField.m; sourceTree = "<group>"; };
+		14FCCD381889E99A009E8AA2 /* GTTimerTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerTypeViewController.h; sourceTree = "<group>"; };
+		14FCCD391889E99A009E8AA2 /* GTTimerTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerTypeViewController.m; sourceTree = "<group>"; };
+		14FCCD3B1889E9DE009E8AA2 /* GTTimerTypeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTimerTypeDataSource.h; sourceTree = "<group>"; };
+		14FCCD3C1889E9DE009E8AA2 /* GTTimerTypeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTimerTypeDataSource.m; sourceTree = "<group>"; };
+		14FCCD3F188B99E8009E8AA2 /* SingleSectionArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSectionArrayDataSource.h; sourceTree = "<group>"; };
+		14FCCD40188B99E8009E8AA2 /* SingleSectionArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleSectionArrayDataSource.m; sourceTree = "<group>"; };
+		14FCCD42188B9B56009E8AA2 /* UITableViewCell+SoundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+SoundCell.h"; sourceTree = "<group>"; };
+		14FCCD43188B9B56009E8AA2 /* UITableViewCell+SoundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SoundCell.m"; sourceTree = "<group>"; };
 		18E247E8C1494631ADBFFADD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5AB77079CA4A5AA769D6E2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3FEAA780120143D4B37CD9DF /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +175,8 @@
 				14035753187A74B60002E307 /* UIScreen+GTAdditions.m */,
 				1439100F187BB5320003F2A1 /* UIColor+GTAdditions.h */,
 				14391010187BB5320003F2A1 /* UIColor+GTAdditions.m */,
+				1459577A18889F8900B278E6 /* UIFont+GTAdditions.h */,
+				1459577B18889F8900B278E6 /* UIFont+GTAdditions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -163,6 +186,8 @@
 			children = (
 				142B8D711880B01800FEDCDE /* GTSettingsViewController.h */,
 				142B8D721880B01800FEDCDE /* GTSettingsViewController.m */,
+				14FCCD311889AFBB009E8AA2 /* GTTimerSettingsViewController.h */,
+				14FCCD321889AFBB009E8AA2 /* GTTimerSettingsViewController.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -174,6 +199,8 @@
 				141C740A1884916700C157CA /* SKTAudio.m */,
 				14787C801881B77A00074D87 /* GTSoundsViewController.h */,
 				14787C811881B77A00074D87 /* GTSoundsViewController.m */,
+				14FCCD42188B9B56009E8AA2 /* UITableViewCell+SoundCell.h */,
+				14FCCD43188B9B56009E8AA2 /* UITableViewCell+SoundCell.m */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -261,6 +288,8 @@
 		1491C49C18775654003A762B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				14FCCD3E188B99C9009E8AA2 /* Support */,
+				14FCCD341889B808009E8AA2 /* Views */,
 				14787C7F1881B72F00074D87 /* Sounds */,
 				142B8D6D1880AD7700FEDCDE /* Settings */,
 				14035751187A748D0002E307 /* Categories */,
@@ -283,6 +312,10 @@
 				1491C4B4187A10BF003A762B /* GTTimerCell.m */,
 				141C740F1884B85C00C157CA /* GTProgressView.h */,
 				141C74101884B85C00C157CA /* GTProgressView.m */,
+				14FCCD381889E99A009E8AA2 /* GTTimerTypeViewController.h */,
+				14FCCD391889E99A009E8AA2 /* GTTimerTypeViewController.m */,
+				14FCCD3B1889E9DE009E8AA2 /* GTTimerTypeDataSource.h */,
+				14FCCD3C1889E9DE009E8AA2 /* GTTimerTypeDataSource.m */,
 			);
 			path = Timers;
 			sourceTree = "<group>";
@@ -362,6 +395,24 @@
 				14E1BC831874D9E2003B72DA /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14FCCD341889B808009E8AA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14FCCD351889B82D009E8AA2 /* GTTextField.h */,
+				14FCCD361889B82D009E8AA2 /* GTTextField.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		14FCCD3E188B99C9009E8AA2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				14FCCD3F188B99E8009E8AA2 /* SingleSectionArrayDataSource.h */,
+				14FCCD40188B99E8009E8AA2 /* SingleSectionArrayDataSource.m */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -548,16 +599,23 @@
 				1491C4B0187A1016003A762B /* GTTimer.m in Sources */,
 				14391014187BBEA00003F2A1 /* GTPlayerColor.m in Sources */,
 				1480088718721AAD002A20ED /* main.m in Sources */,
+				14FCCD41188B99E8009E8AA2 /* SingleSectionArrayDataSource.m in Sources */,
+				1459577C18889F8900B278E6 /* UIFont+GTAdditions.m in Sources */,
 				14787C821881B77A00074D87 /* GTSoundsViewController.m in Sources */,
+				14FCCD3A1889E99A009E8AA2 /* GTTimerTypeViewController.m in Sources */,
 				141C740B1884916700C157CA /* SKTAudio.m in Sources */,
+				14FCCD3D1889E9DE009E8AA2 /* GTTimerTypeDataSource.m in Sources */,
 				141F7117187E03FE00F664BD /* GTPreferences.m in Sources */,
 				14391011187BB5320003F2A1 /* UIColor+GTAdditions.m in Sources */,
+				14FCCD331889AFBB009E8AA2 /* GTTimerSettingsViewController.m in Sources */,
 				141C74111884B85C00C157CA /* GTProgressView.m in Sources */,
 				141F711E187E0D5000F664BD /* GTTimeHelper.m in Sources */,
 				1491C4B5187A10BF003A762B /* GTTimerCell.m in Sources */,
+				14FCCD371889B82D009E8AA2 /* GTTextField.m in Sources */,
 				14035754187A74B60002E307 /* UIScreen+GTAdditions.m in Sources */,
 				1480088B18721AAD002A20ED /* GTAppDelegate.m in Sources */,
 				1491C4A1187756DB003A762B /* GTTimerViewController.m in Sources */,
+				14FCCD44188B9B56009E8AA2 /* UITableViewCell+SoundCell.m in Sources */,
 				1491C4A71878BCFD003A762B /* GTTimerCollectionDataSource.m in Sources */,
 				1491B8661880828100355A0F /* GTTimeController.m in Sources */,
 				141C740E18849FD100C157CA /* GTTimerSound.m in Sources */,
@@ -709,7 +767,7 @@
 				INFOPLIST_FILE = "GameTime/GameTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -735,7 +793,7 @@
 				INFOPLIST_FILE = "GameTime/GameTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

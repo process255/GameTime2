@@ -15,5 +15,9 @@ UICollectionViewDelegate,
 LXReorderableCollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UIViewController *controller;
+@property (strong, nonatomic) NSMutableArray *timers;
+
+- (void)openTimerPreferencesAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

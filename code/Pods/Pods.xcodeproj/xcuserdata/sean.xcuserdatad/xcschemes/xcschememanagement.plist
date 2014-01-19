@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-InfColorPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LXReorderableCollectionViewFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>Pods-Specs-Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Specs-InfColorPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,47 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09EF9CE0B1C54753B326A171</key>
+		<key>0ECE160CB41D42C2A789AFEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5488ADF4F2584DA2B5463B79</key>
+		<key>21C2FB7661A042CAB0FDFEAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91460C8B5D224280BF911EFD</key>
+		<key>2E91A7593FB34C56BFD39328</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF8C7994A0A9415BBE39472D</key>
+		<key>505BF1576FE04C31B5221F8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C33A7374E3FA4D85B70E626A</key>
+		<key>5846467404D34F959EC021D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D323F045A2A242E4B6420ED3</key>
+		<key>845044DF2B1E4510AA980823</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD1D1CD11BEE4567A07C29AE</key>
+		<key>8E8DF9C4DBA04B698871729D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E1CBEFCDF76C42F48D589182</key>
+		<key>8F5D946A8F4B4F4FB52C52B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F2D822C409FA438BAC928446</key>
+		<key>C478F919243845CAB3DB3255</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E266CBA8D195470E8E9B2633</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F414E44B1FE2414D9288466C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
