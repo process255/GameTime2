@@ -14,6 +14,54 @@
 - (id)initWithItems:(NSArray *)items
      cellIdentifier:(NSString *)identifier
  configureCellBlock:(ConfigureCellBlock)configureCellBlock
+{
+    self = [self initWithItems:items
+                cellIdentifier:identifier
+            configureCellBlock:configureCellBlock
+            sectionHeaderTitle:nil
+            sectionFooterTitle:nil];
+    if (self) {
+    }
+
+    return self;
+}
+
+
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)identifier
+ configureCellBlock:(ConfigureCellBlock)configureCellBlock
+ sectionHeaderTitle:(NSString *)sectionHeaderTitle
+{
+    self = [self initWithItems:items
+                cellIdentifier:identifier
+            configureCellBlock:configureCellBlock
+            sectionHeaderTitle:sectionHeaderTitle
+            sectionFooterTitle:nil];
+    if (self) {
+    }
+
+    return self;
+}
+
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)identifier
+ configureCellBlock:(ConfigureCellBlock)configureCellBlock
+ sectionFooterTitle:(NSString *)sectionFooterTitle
+{
+    self = [self initWithItems:items
+                cellIdentifier:identifier
+            configureCellBlock:configureCellBlock
+            sectionHeaderTitle:nil
+            sectionFooterTitle:sectionFooterTitle];
+    if (self) {
+    }
+
+    return self;
+}
+
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)identifier
+ configureCellBlock:(ConfigureCellBlock)configureCellBlock
  sectionHeaderTitle:(NSString *)sectionHeaderTitle
  sectionFooterTitle:(NSString *)sectionFooterTitle
 {

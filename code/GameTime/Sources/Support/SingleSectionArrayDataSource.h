@@ -8,8 +8,22 @@ typedef void (^ConfigureCellBlock)(id cell, id item, NSIndexPath *indexPath);
 
 - (id)initWithItems:(NSArray *)items
      cellIdentifier:(NSString *)identifier
+ configureCellBlock:(ConfigureCellBlock)configureCellBlock;
+
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)identifier
  configureCellBlock:(ConfigureCellBlock)configureCellBlock
  sectionHeaderTitle:(NSString *)sectionHeaderTitle
+ sectionFooterTitle:(NSString *)sectionFooterTitle;
+
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)identifier
+ configureCellBlock:(ConfigureCellBlock)configureCellBlock
+ sectionHeaderTitle:(NSString *)sectionHeaderTitle;
+
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)identifier
+ configureCellBlock:(ConfigureCellBlock)configureCellBlock
  sectionFooterTitle:(NSString *)sectionFooterTitle;
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;

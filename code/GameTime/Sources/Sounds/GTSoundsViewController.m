@@ -42,8 +42,7 @@
                                      configureCellBlock:^(UITableViewCell *cell, GTTimerSound *timerSound, NSIndexPath *indexPath) {
                                               [cell configureForTimerSound:timerSound indexPath:indexPath];
                                           }
-                                     sectionHeaderTitle:NSLocalizedString(@"Sounds", nil)
-                                     sectionFooterTitle:nil];
+                                     sectionHeaderTitle:NSLocalizedString(@"Sounds", nil)];
 
     self.tableView.dataSource = self.dataSource;
 }
