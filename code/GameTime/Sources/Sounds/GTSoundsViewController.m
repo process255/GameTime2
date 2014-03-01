@@ -13,6 +13,8 @@
 #import "SingleSectionArrayDataSource.h"
 #import "UITableViewCell+SoundCell.h"
 
+static NSString * const kSoundCellIdentifier = @"SoundCell";
+
 
 @interface GTSoundsViewController ()
 
@@ -38,7 +40,7 @@
 - (void)setupDataSource {
     self.dataSource =
     [[SingleSectionArrayDataSource alloc] initWithItems:[GTPreferences sharedInstance].timerSounds
-                                         cellIdentifier:@"SoundCell"
+                                         cellIdentifier:kSoundCellIdentifier
                                      configureCellBlock:^(UITableViewCell *cell, GTTimerSound *timerSound, NSIndexPath *indexPath) {
                                               [cell configureForTimerSound:timerSound indexPath:indexPath];
                                           }

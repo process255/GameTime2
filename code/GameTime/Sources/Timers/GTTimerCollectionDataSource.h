@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.h>
 
+@class GTTimerViewController;
+
 @interface GTTimerCollectionDataSource : NSObject
 <LXReorderableCollectionViewDataSource,
 UICollectionViewDelegate,
 LXReorderableCollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) UIViewController *controller;
+@property (nonatomic, strong) GTTimerViewController *controller;
 @property (strong, nonatomic) NSMutableArray *timers;
 
 - (void)openTimerPreferencesAtIndexPath:(NSIndexPath *)indexPath;

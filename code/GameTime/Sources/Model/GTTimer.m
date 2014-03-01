@@ -11,16 +11,11 @@
 
 @implementation GTTimer
 
-- (NSString*)description
-{
-    return [NSString stringWithFormat:@"position = %lu, name = %@", (unsigned long)self.position, self.name];
-}
-
 + (GTTimer*)timerWith:(NSInteger)player
 {
     GTTimer *timer = [[GTTimer alloc] init];
-    timer.name = [[GTPreferences sharedInstance].defaultNames objectAtIndex:player];
-    timer.playerColor = [[GTPreferences sharedInstance].defaultRowColors objectAtIndex:player];
+    timer.name = [GTPreferences sharedInstance].defaultNames[player];
+    timer.playerColor = [GTPreferences sharedInstance].defaultRowColors[player];
     
     timer.type = [GTPreferences sharedInstance].timerType;
     timer.state = GTTimerStatePaused;
@@ -73,13 +68,6 @@
 
 #pragma mark - Getters/Setters
 
-//- (NSTimer*)timer
-//{
-//    if (!_timer)
-//    {
-//        _timer = [NSTimer timerWithTimeInterval:1.0 invocation:<#(NSInvocation *)#> repeats:<#(BOOL)#>]
-//    }
-//}
 
 + (NSArray*)timerTypes
 {

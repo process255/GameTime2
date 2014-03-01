@@ -64,7 +64,6 @@
     if (_dataSource) return _dataSource;
 
     _dataSource = [[GTTimerTypeDataSource alloc] init];
-    _dataSource.tableView = self.tableView;
     return _dataSource;
 }
 

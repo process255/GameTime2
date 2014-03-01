@@ -16,6 +16,11 @@
 		142B8D731880B01800FEDCDE /* GTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B8D721880B01800FEDCDE /* GTSettingsViewController.m */; };
 		14391011187BB5320003F2A1 /* UIColor+GTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14391010187BB5320003F2A1 /* UIColor+GTAdditions.m */; };
 		14391014187BBEA00003F2A1 /* GTPlayerColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14391013187BBEA00003F2A1 /* GTPlayerColor.m */; };
+		143A4EC118C25ABA00A43BC0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 143A4EC018C25ABA00A43BC0 /* Settings.bundle */; };
+		143A4EC418C289B700A43BC0 /* GTGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 143A4EC318C289B700A43BC0 /* GTGradientView.m */; };
+		1456FC1B188D8831009D3503 /* LabeledPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1456FC1A188D8831009D3503 /* LabeledPickerView.m */; };
+		1456FC1E188D88C7009D3503 /* GTPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1456FC1D188D88C7009D3503 /* GTPickerCell.m */; };
+		1456FC2A188E000F009D3503 /* GTPlayerColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1456FC29188E000F009D3503 /* GTPlayerColorSpec.m */; };
 		1459577C18889F8900B278E6 /* UIFont+GTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1459577B18889F8900B278E6 /* UIFont+GTAdditions.m */; };
 		14787C821881B77A00074D87 /* GTSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14787C811881B77A00074D87 /* GTSoundsViewController.m */; };
 		1480087B18721AAD002A20ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480087A18721AAD002A20ED /* Foundation.framework */; };
@@ -54,9 +59,20 @@
 		14FCCD3D1889E9DE009E8AA2 /* GTTimerTypeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD3C1889E9DE009E8AA2 /* GTTimerTypeDataSource.m */; };
 		14FCCD41188B99E8009E8AA2 /* SingleSectionArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD40188B99E8009E8AA2 /* SingleSectionArrayDataSource.m */; };
 		14FCCD44188B9B56009E8AA2 /* UITableViewCell+SoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCCD43188B9B56009E8AA2 /* UITableViewCell+SoundCell.m */; };
+		610D92EA01D148F19E0C12E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E247E8C1494631ADBFFADD /* libPods.a */; };
 		AD4097F9DED04D8FAFDE9D8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E247E8C1494631ADBFFADD /* libPods.a */; };
 		DFEA8F2A11ED4E78B3E3A25B /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEAA780120143D4B37CD9DF /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1456FC27188DF2BC009D3503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1480086F18721AAC002A20ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1480087618721AAC002A20ED;
+			remoteInfo = GameTime;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		05BE619DC91A4D2AAEA05A6E /* Pods-GameTimeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameTimeTests.xcconfig"; path = "Pods/Pods-GameTimeTests.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +94,15 @@
 		14391010187BB5320003F2A1 /* UIColor+GTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GTAdditions.m"; sourceTree = "<group>"; };
 		14391012187BBEA00003F2A1 /* GTPlayerColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPlayerColor.h; sourceTree = "<group>"; };
 		14391013187BBEA00003F2A1 /* GTPlayerColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPlayerColor.m; sourceTree = "<group>"; };
+		143A4EC018C25ABA00A43BC0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		143A4EC218C289B700A43BC0 /* GTGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGradientView.h; sourceTree = "<group>"; };
+		143A4EC318C289B700A43BC0 /* GTGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGradientView.m; sourceTree = "<group>"; };
+		1456FC19188D8831009D3503 /* LabeledPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledPickerView.h; sourceTree = "<group>"; };
+		1456FC1A188D8831009D3503 /* LabeledPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledPickerView.m; sourceTree = "<group>"; };
+		1456FC1C188D88C7009D3503 /* GTPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPickerCell.h; sourceTree = "<group>"; };
+		1456FC1D188D88C7009D3503 /* GTPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPickerCell.m; sourceTree = "<group>"; };
+		1456FC23188DEFD6009D3503 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		1456FC29188E000F009D3503 /* GTPlayerColorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPlayerColorSpec.m; sourceTree = "<group>"; };
 		1459577A18889F8900B278E6 /* UIFont+GTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GTAdditions.h"; sourceTree = "<group>"; };
 		1459577B18889F8900B278E6 /* UIFont+GTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GTAdditions.m"; sourceTree = "<group>"; };
 		14787C801881B77A00074D87 /* GTSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSoundsViewController.h; sourceTree = "<group>"; };
@@ -162,6 +187,7 @@
 				14E1BC741874D9E2003B72DA /* SenTestingKit.framework in Frameworks */,
 				14E1BC771874D9E2003B72DA /* Foundation.framework in Frameworks */,
 				DFEA8F2A11ED4E78B3E3A25B /* libPods-Specs.a in Frameworks */,
+				610D92EA01D148F19E0C12E1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +256,7 @@
 		1480087918721AAD002A20ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1456FC23188DEFD6009D3503 /* libPods.a */,
 				1480087A18721AAD002A20ED /* Foundation.framework */,
 				1480087C18721AAD002A20ED /* CoreGraphics.framework */,
 				1480087E18721AAD002A20ED /* UIKit.framework */,
@@ -273,6 +300,7 @@
 			children = (
 				14BB6AF718843FC000FF0C7F /* Sounds */,
 				1491B8741880A9D600355A0F /* Images */,
+				143A4EC018C25ABA00A43BC0 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -316,6 +344,8 @@
 				14FCCD391889E99A009E8AA2 /* GTTimerTypeViewController.m */,
 				14FCCD3B1889E9DE009E8AA2 /* GTTimerTypeDataSource.h */,
 				14FCCD3C1889E9DE009E8AA2 /* GTTimerTypeDataSource.m */,
+				1456FC1C188D88C7009D3503 /* GTPickerCell.h */,
+				1456FC1D188D88C7009D3503 /* GTPickerCell.m */,
 			);
 			path = Timers;
 			sourceTree = "<group>";
@@ -360,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				1491C4B7187A11C8003A762B /* GTTimerSpec.m */,
+				1456FC29188E000F009D3503 /* GTPlayerColorSpec.m */,
 			);
 			name = " Model";
 			path = Model;
@@ -400,8 +431,12 @@
 		14FCCD341889B808009E8AA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1456FC19188D8831009D3503 /* LabeledPickerView.h */,
+				1456FC1A188D8831009D3503 /* LabeledPickerView.m */,
 				14FCCD351889B82D009E8AA2 /* GTTextField.h */,
 				14FCCD361889B82D009E8AA2 /* GTTextField.m */,
+				143A4EC218C289B700A43BC0 /* GTGradientView.h */,
+				143A4EC318C289B700A43BC0 /* GTGradientView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -451,6 +486,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1456FC28188DF2BC009D3503 /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = Specs;
@@ -495,6 +531,7 @@
 				14BB6AFE1884401500FF0C7F /* alarm-clock-01.wav in Resources */,
 				14BB6B031884401500FF0C7F /* small-bell-ringing-02.wav in Resources */,
 				14BB6B011884401500FF0C7F /* fail-buzzer-02.wav in Resources */,
+				143A4EC118C25ABA00A43BC0 /* Settings.bundle in Resources */,
 				1480089118721AAD002A20ED /* Main_iPad.storyboard in Resources */,
 				1491B8761880A9FA00355A0F /* Images.xcassets in Resources */,
 				1480089618721AAD002A20ED /* Images.xcassets in Resources */,
@@ -541,7 +578,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBD5EA33E17944439A821C91 /* Check Pods Manifest.lock */ = {
@@ -606,10 +643,12 @@
 				141C740B1884916700C157CA /* SKTAudio.m in Sources */,
 				14FCCD3D1889E9DE009E8AA2 /* GTTimerTypeDataSource.m in Sources */,
 				141F7117187E03FE00F664BD /* GTPreferences.m in Sources */,
+				143A4EC418C289B700A43BC0 /* GTGradientView.m in Sources */,
 				14391011187BB5320003F2A1 /* UIColor+GTAdditions.m in Sources */,
 				14FCCD331889AFBB009E8AA2 /* GTTimerSettingsViewController.m in Sources */,
 				141C74111884B85C00C157CA /* GTProgressView.m in Sources */,
 				141F711E187E0D5000F664BD /* GTTimeHelper.m in Sources */,
+				1456FC1E188D88C7009D3503 /* GTPickerCell.m in Sources */,
 				1491C4B5187A10BF003A762B /* GTTimerCell.m in Sources */,
 				14FCCD371889B82D009E8AA2 /* GTTextField.m in Sources */,
 				14035754187A74B60002E307 /* UIScreen+GTAdditions.m in Sources */,
@@ -619,6 +658,7 @@
 				1491C4A71878BCFD003A762B /* GTTimerCollectionDataSource.m in Sources */,
 				1491B8661880828100355A0F /* GTTimeController.m in Sources */,
 				141C740E18849FD100C157CA /* GTTimerSound.m in Sources */,
+				1456FC1B188D8831009D3503 /* LabeledPickerView.m in Sources */,
 				142B8D731880B01800FEDCDE /* GTSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,11 +670,20 @@
 				1491C4B8187A11C8003A762B /* GTTimerSpec.m in Sources */,
 				1491C4BA187A124E003A762B /* GTTimerCellSpec.m in Sources */,
 				1491C4AC1878BE0C003A762B /* GTTimerCollectionDataSourceSpec.m in Sources */,
+				1456FC2A188E000F009D3503 /* GTPlayerColorSpec.m in Sources */,
 				1491C4AA1878BD77003A762B /* GTTimerViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1456FC28188DF2BC009D3503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1480087618721AAC002A20ED /* GameTime */;
+			targetProxy = 1456FC27188DF2BC009D3503 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1480088318721AAD002A20ED /* InfoPlist.strings */ = {
@@ -766,6 +815,7 @@
 				);
 				INFOPLIST_FILE = "GameTime/GameTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -792,6 +842,7 @@
 				);
 				INFOPLIST_FILE = "GameTime/GameTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -800,11 +851,12 @@
 		};
 		14E1BC841874D9E2003B72DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C7B538469BE4FAABB1A3BB0 /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = 3B5AB77079CA4A5AA769D6E2 /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GameTime.app/GameTime";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_MODULES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -823,7 +875,7 @@
 					"\"${PODS_ROOT}/Headers/OCMock\"",
 				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -832,17 +884,19 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		14E1BC851874D9E2003B72DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C7B538469BE4FAABB1A3BB0 /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = 3B5AB77079CA4A5AA769D6E2 /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GameTime.app/GameTime";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_MODULES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -857,7 +911,7 @@
 					"\"${PODS_ROOT}/Headers/OCMock\"",
 				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -866,6 +920,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

@@ -16,7 +16,6 @@
 @interface GTTimerSettingsViewController ()<InfColorPickerControllerDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *timerNameTextField;
-@property (nonatomic, weak) IBOutlet UIView *timerColorView;
 
 @end
 
@@ -29,7 +28,7 @@
     self.title = self.timer.name;
     self.timerNameTextField.text = self.timer.name;
     self.timerNameTextField.delegate = self;
-    self.timerColorView.backgroundColor = self.timer.playerColor.rowBackgroundColor;
+    [self.timerNameTextField becomeFirstResponder];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -54,44 +53,6 @@
     self.title = self.timer.name;
 }
 
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - Private Methods
-
-- (void)showColorPicker
-{
-    InfColorPickerController* picker = [InfColorPickerController colorPickerViewController];
-    picker.sourceColor = self.timer.playerColor.rowBackgroundColor;
-	picker.delegate = self;
-    [self.navigationController pushViewController:picker animated:YES];
-}
-
-#pragma mark - Table view data source
-
--(void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    if (indexPath.row == 1)
-    {
-        [self showColorPicker];
-    }
-}
-
-#pragma mark - InfColorPickerControllerDelegate Methods
-
-- (void)colorPickerControllerDidChangeColor: (InfColorPickerController*) controller
-{
-    DDLogVerbose(@"color chosen = %@", controller.resultColor);
-    self.timer.playerColor.rowBackgroundColor = controller.resultColor;
-    [[GTPreferences sharedInstance] saveTimer:self.timer];
-    self.timerColorView.backgroundColor = self.timer.playerColor.rowBackgroundColor;
-}
 
 #pragma mark - UITextFieldDelegate
 

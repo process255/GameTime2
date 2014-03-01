@@ -10,6 +10,6 @@
 
 @interface GTTimerTypeDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+//@property (nonatomic, strong) UITableView *tableView;
 
 @end

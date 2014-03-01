@@ -46,15 +46,6 @@
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor whiteColor] backgroundColor:[UIColor hex:0xFF0000] forFlag:LOG_FLAG_ERROR];
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor whiteColor] backgroundColor:[UIColor hex:0xFFA500] forFlag:LOG_FLAG_WARN];
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor hex:0x00FFFF] backgroundColor:nil forFlag:LOG_FLAG_VERBOSE];
-    
-    // error test
-    DDLogError(@"Sample Error");
-    
-    // warn test
-    DDLogWarn(@"Sample Warn");
-    
-    // verbose test
-    DDLogVerbose(@"Sample Verbose");
 }
 
 - (void)setupObservers

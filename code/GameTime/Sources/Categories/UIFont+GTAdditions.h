@@ -14,5 +14,6 @@
 + (UIFont*)activeTimerFont;
 + (UIFont*)nameFont;
 + (UIFont*)activeNameFont;
++ (UIFont*)hiddenTimerButtonFont;
 
 @end

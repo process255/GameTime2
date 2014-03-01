@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTTimerCell.h"
 
-@interface GTTimerViewController : UIViewController <UICollectionViewDelegate>
+@interface GTTimerViewController : UIViewController<GTTimerCellDelegate>
 
 @end

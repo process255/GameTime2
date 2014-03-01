@@ -1,0 +1,5 @@
+#include "Pods-SDColor.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/SDColor" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Cedar" "${PODS_ROOT}/Headers/Cedar/Cedar-iOS" "${PODS_ROOT}/Headers/CocoaLumberjack" "${PODS_ROOT}/Headers/Expecta" "${PODS_ROOT}/Headers/InfColorPicker" "${PODS_ROOT}/Headers/LXReorderableCollectionViewFlowLayout" "${PODS_ROOT}/Headers/OCMock" "${PODS_ROOT}/Headers/SDColor"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

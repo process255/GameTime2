@@ -12,8 +12,9 @@
 #import "GTPlayerColor.h"
 #import "GTTimeHelper.h"
 #import "GTPreferences.h"
-
 #import "GTTimerSettingsViewController.h"
+#import "GTTimerViewController.h"
+
 
 @interface GTTimerCollectionDataSource ()
 
@@ -92,6 +93,8 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath
     GTTimerCell *timerCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TimerCell"
                                                                        forIndexPath:indexPath];
 
+    timerCell.delegate = self.controller;
+
     timerCell.timer = timer;
     [timerCell start];
     return timerCell;
@@ -103,6 +106,11 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(UIDeviceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
     {
+        if ([GTPreferences sharedInstance].numberOfPlayers == 1)
+        {
+            return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.height);
+        }
+
         return CGSizeMake(self.collectionView.frame.size.width / 2, self.collectionView.frame.size.height / ceil(([GTPreferences sharedInstance].numberOfPlayers / 2.0)));        
     }
     else
@@ -180,8 +188,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
         for ( NSUInteger i = 0 ; i < [GTPreferences sharedInstance].numberOfPlayers ; i++)
         {
             GTTimer* timer = [GTTimer timerWith:i];
-            timer.type = GTTimerTypeCountDown;
-            timer.state = GTTimerStatePaused;
+//            timer.type = GTTimerTypeCountDown;
+//            timer.state = GTTimerStatePaused;
             [[GTPreferences sharedInstance] saveTimer:timer];
             [_timers addObject:timer];
         }

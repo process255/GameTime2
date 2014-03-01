@@ -35,5 +35,10 @@
     return [UIFont fontWithName:@"HelveticaNeue-Bold" size:size];
 }
 
++ (UIFont*)hiddenTimerButtonFont
+{
+    NSUInteger size = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? 15 : 30;
+    return [UIFont fontWithName:@"HelveticaNeue" size:size];
+}
 
 @end

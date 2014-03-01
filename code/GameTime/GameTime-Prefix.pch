@@ -19,7 +19,7 @@
     #import "DDTTYLogger.h"
     #import "UIColor+GTAdditions.h"
     #import "UIFont+GTAdditions.h"
-
+    #import "UIColor+SDColor.h"
 #endif
 
 #ifdef DEBUG

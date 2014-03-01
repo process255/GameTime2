@@ -9,6 +9,12 @@
 #import "GTTimerTypeDataSource.h"
 #import "GTTimer.h"
 #import "GTPreferences.h"
+#import "GTTimeHelper.h"
+#import "GTPickerCell.h"
+
+
+static NSString * const TimePickerCellIdentifier = @"TimePickerCell";
+static NSString * const TimerTypeCellIdentifier = @"TimerTypeCell";
 
 
 @interface GTTimerTypeDataSource()
@@ -24,23 +30,34 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimerTypeCell" forIndexPath:indexPath];
+    UITableViewCell *cell;
+    NSString *identifier = TimerTypeCellIdentifier;
 
     NSString *cellText = @"";
     if ([self isATimerType:indexPath.section])
     {
+
         cellText = [self textForTimerTypeAtIndexPath:indexPath];
 //        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     else
     {
+        identifier = indexPath.row == 0 ? TimerTypeCellIdentifier : TimePickerCellIdentifier;
         cellText = [self textForOptionAtIndexPath:indexPath];
     }
+    cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
 
-    cell.accessoryType = [GTPreferences sharedInstance].timerType == indexPath.section ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-
-    cell.textLabel.text = cellText;
-    cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    if ([identifier isEqualToString:TimerTypeCellIdentifier])
+    {
+        cell.accessoryType = [GTPreferences sharedInstance].timerType == indexPath.section ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+        cell.textLabel.text = cellText;
+        cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    }
+    else if ([identifier isEqualToString:TimePickerCellIdentifier])
+    {
+        GTPickerCell *pickerCell = (GTPickerCell *)cell;
+        [pickerCell setupTime];
+    }
 
     return cell;
 }
@@ -52,7 +69,23 @@
 
 - (NSString *)textForOptionAtIndexPath:(NSIndexPath *)indexPath
 {
-    return NSLocalizedString(@"Reset", nil);
+    switch (indexPath.row)
+    {
+        case 0:
+            return NSLocalizedString(@"Reset", nil);
+            break;
+        case 1:
+        {
+            NSUInteger time = [GTPreferences sharedInstance].countDownTime;
+            return [NSString stringWithFormat:@"Time - %@", [GTTimeHelper timeAsHoursMinutesSeconds:time forceHours:YES]];
+
+//            return NSLocalizedString(@"Time", nil);
+            break;
+        }
+        default:
+            break;
+    }
+    return @"";
 }
 
 - (void)tableView:(UITableView *)tableView
@@ -131,12 +164,20 @@ titleForFooterInSection:(NSInteger)section
     {
         return @"";
     }
+}
 
+- (BOOL)isAPickerRow:(NSIndexPath*)indexPath
+{
+    return ![self isATimerType:indexPath.section] && indexPath.row == 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self isAPickerRow:indexPath])
+    {
+        return 163.0;
+    }
     return 55.0;
 }
 

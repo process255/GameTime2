@@ -10,8 +10,6 @@
 
 @interface UIColor (GTAdditions)
 
-+ (UIColor*)hex:(NSInteger)hex;
-+ (UIColor*)hex:(NSInteger)hex alpha:(CGFloat)alpha;
 - (UIColor*)withBrightness:(CGFloat)newBrightness;
 - (UIColor*)darker;
 - (UIColor*)compatibleContrastedColor;

@@ -29,16 +29,6 @@
       buildConfiguration = "Debug">
       <Testables>
          <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1480089A18721AAD002A20ED"
-               BuildableName = "GameTimeTests.xctest"
-               BlueprintName = "GameTimeTests"
-               ReferencedContainer = "container:GameTime.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
@@ -91,7 +81,7 @@
          <EnvironmentVariable
             key = "CEDAR_SYMBOLICATE_EXCEPTIONS"
             value = ""
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "CEDAR_REPORTER_CLASS"

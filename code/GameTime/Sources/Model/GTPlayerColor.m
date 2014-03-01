@@ -40,8 +40,6 @@
     [encoder encodeObject:self.inactiveTimerColor forKey:@"inactiveTimerColor"];
     [encoder encodeObject:self.progressColor forKey:@"progressColor"];
     [encoder encodeObject:self.textFieldBgColor forKey:@"textFieldBgColor"];
-    
-    
 }
 
 - (id)initWithCoder:(NSCoder *)decoder

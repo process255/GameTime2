@@ -8,15 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString * const RevealCellDidOpenNotification;
+
 @class GTTimer;
 @class GTProgressView;
 
+@protocol GTTimerCellDelegate <NSObject>
+
+- (void)colorTapped:(GTTimer *)timer;
+- (void)editTapped:(GTTimer *)timer;
+
+@end
+
 @interface GTTimerCell : UICollectionViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *nameLabel;
-@property (nonatomic, strong) IBOutlet UILabel *timerLabel;
-@property (nonatomic, strong) IBOutlet GTProgressView *progressView;
-@property (nonatomic, strong) IBOutlet NSLayoutConstraint *progressViewWidthConstraint;
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *timerLabel;
+@property (nonatomic, weak) IBOutlet GTProgressView *progressView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *progressViewWidthConstraint;
+@property (nonatomic, unsafe_unretained) id<GTTimerCellDelegate> delegate;
 
 @property (nonatomic, strong) GTTimer *timer;
 

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SDColor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Specs-Cedar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -49,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Specs-SDColor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Specs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,57 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0ECE160CB41D42C2A789AFEF</key>
+		<key>0BCC9369FC7C426C884146DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>21C2FB7661A042CAB0FDFEAC</key>
+		<key>0CDFB8A71D074FB7883172F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E91A7593FB34C56BFD39328</key>
+		<key>42D00EF63855426EAB1162E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>505BF1576FE04C31B5221F8D</key>
+		<key>54D1272F0E1C48718D310119</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5846467404D34F959EC021D1</key>
+		<key>7161134F18534CB58D7DD79D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>845044DF2B1E4510AA980823</key>
+		<key>7B3BFDEF7F19442685BDD022</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E8DF9C4DBA04B698871729D</key>
+		<key>8E2B68BD5B524A6888944928</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F5D946A8F4B4F4FB52C52B4</key>
+		<key>A124C8D324F84341951848EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C478F919243845CAB3DB3255</key>
+		<key>E253A25F7B6B4B06B7AFE72D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E266CBA8D195470E8E9B2633</key>
+		<key>E25A8FC803CE4780825DF7B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F414E44B1FE2414D9288466C</key>
+		<key>EA44110161FF44C29B7E57AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0BA074B29A749CC8CE5D140</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9FD91AD5BE148F4ADEAC28B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
